@@ -36,8 +36,8 @@ const Footer_Card = () => {
         />
         <h3>&nbsp;</h3>
         <p>
-          Find your local store, view opening hours and find out where you can
-          get delivery to collect your order from! <br /> Just enter your
+          Find your local store more, view opening hours and find out where you
+          can get delivery to collect your order from! <br /> Just enter your
           postcode below to find your nearest store.
         </p>
         <FormInput
