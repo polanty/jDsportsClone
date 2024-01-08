@@ -1,0 +1,74 @@
+.Footer_Card_container {
+  background-color: #fff;
+  width: 100%;
+  display: flex;
+  color: #fff;
+}
+
+.Footer_Card_card,
+.Footer_Card_Last {
+  display: inline-block;
+  background: linear-gradient(#2e2e2e, #2e2e2e);
+  width: 33.3%;
+  max-height: 44rem;
+  /* for the button element  and last image*/
+  position: relative;
+}
+
+.Footer_Card_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Footer_Card_card > p {
+  font-size: 1.2rem;
+  line-height: 180%;
+  text-align: center;
+  flex: 1;
+}
+
+.Footer_Card_card > h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+/* .Footer_Card_Last_img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+} */
+
+.Footer_Card_card:not(:last-child) {
+  margin-right: 1.5rem;
+  padding: 3rem 2rem 0.5rem;
+}
+
+.footer-btn-primary {
+  background-color: inherit;
+  color: #fff;
+  border: none;
+  outline: none;
+
+  border: 1px solid #fff;
+  font-weight: 700;
+  width: 100%;
+  padding: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5.2rem;
+  letter-spacing: 0.5px;
+
+  transform: translate(0, -80%);
+  transition: background-color 0.5s;
+}
+
+.footer-btn-primary:hover {
+  background-color: #43d5b0;
+}
