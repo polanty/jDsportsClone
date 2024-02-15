@@ -1,0 +1,59 @@
+.Overlay,
+.Overlay_inner {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-out;
+}
+
+.Overlay {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 498;
+}
+
+.Overlay_inner {
+  z-index: 499;
+  background-color: white;
+  width: 90%;
+  top: 4.5%;
+  left: 5%;
+  height: 25rem;
+
+  /* inner styling for overlay contents */
+  padding: 1rem;
+  display: flex;
+  gap: 3rem;
+}
+
+.Trending,
+.recent__search {
+  flex-basis: 15rem;
+}
+
+.recently__viewed {
+  flex-grow: 1;
+}
+.Overlayactive,
+.Overlay_inner-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.Overlay__header {
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.22;
+  letter-spacing: -0.36px;
+}
+/* .text-btn {
+  width: 100px;
+  height: 200px;
+  background-color: red;
+  color: white;
+} */

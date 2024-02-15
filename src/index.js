@@ -6,6 +6,7 @@ import { StrictMode } from "react";
 import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
+import { UserProvider } from "./Contexts/Cart.context";
 
 const rootElement = document.getElementById("root");
 const root = ReactDOM.createRoot(rootElement);
@@ -13,7 +14,9 @@ const root = ReactDOM.createRoot(rootElement);
 root.render(
   <StrictMode>
     <BrowserRouter>
-      <App />
+      <UserProvider>
+        <App />
+      </UserProvider>
     </BrowserRouter>
   </StrictMode>
 );

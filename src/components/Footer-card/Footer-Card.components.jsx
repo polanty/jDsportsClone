@@ -3,7 +3,7 @@ import FormInput from "../Form-input/Form-input.components";
 import { Button } from "../../components/Button.componets";
 import { CardImage } from "../FullImage/FullImage-components";
 
-const Footer_Card = () => {
+const FooterCard = () => {
   return (
     <div className="Footer_Card_container">
       <div className="Footer_Card_card">
@@ -58,4 +58,4 @@ const Footer_Card = () => {
   );
 };
 
-export default Footer_Card;
+export default FooterCard;

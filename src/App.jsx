@@ -1,20 +1,28 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+// import ReactDOM from "react-dom/client";
 
 import { Routes, Route } from "react-router-dom";
 import "./styles.css";
 import { Navigation } from "./Navigation";
 import Home from "./Home";
-import Shop from "./Shop";
-import Checkout from "./Checkout";
+// import Shop from "./Shop";
+// import Checkout from "./Checkout";
+import MenRoute from "./Categories/Category-men/CategoryMen.routes";
+import WomenRoute from "./Categories/Category-women/CategoryWomen.routes";
+import KidsRoute from "./Categories/Category-Kids/CategoryKids.routes";
+import BrandRoute from "./Categories/Category-brands/CategoryBrands.routes";
+import AccessoryRoute from "./Categories/Category-accessories/CategoryAccessories.routes";
 
 export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Navigation />}>
         <Route index element={<Home />}></Route>
-        <Route path="Shop" element={<Shop />}></Route>
-        <Route path="Checkout" element={<Checkout />}></Route>
+        <Route path="men" element={<MenRoute />}></Route>
+        <Route path="women" element={<WomenRoute />}></Route>
+        <Route path="kids" element={<KidsRoute />}></Route>
+        <Route path="brands" element={<BrandRoute />}></Route>
+        <Route path="accessories" element={<AccessoryRoute />}></Route>
       </Route>
     </Routes>
   );

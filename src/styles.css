@@ -16,6 +16,7 @@ html {
 
 body {
   font-family: Gotham SSm A, Gotham SSm B, Arial, sans-serif;
+  position: relative;
 }
 
 .products {
@@ -55,26 +56,38 @@ body {
   /* background-color: #f8f8f8; */
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 3rem;
+}
+
+.form_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e5e5;
+  height: 5rem;
+  /* background-color: red; */
 }
 
 .nav-item:link,
 .nav-item:visited {
   text-decoration: none;
-  color: #414141;
-  display: inline-block;
-  padding: 0.5rem 1rem;
+  color: black;
+  display: block;
+  padding: 0.5rem 1.5rem;
   margin-right: 0.3rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  position: relative;
+  height: 100%;
+
+  transition: all 0.2s ease-out;
 }
 
 .nav-item:hover {
-  color: black;
+  opacity: 0.5;
 }
-.nav-item:link,
-.nav-item:visited {
-  padding: 0;
-}
+
 .basket {
   margin-left: auto;
   width: 15px;
@@ -199,9 +212,11 @@ body {
   display: flex;
   align-items: center;
   width: 100%;
+  height: 5rem;
 }
 
-.SignUp-input {
+.SignUp-input,
+.SignUp-input--search {
   width: 100%;
   padding: 2rem 1rem;
   font-size: 1.2rem;
@@ -209,6 +224,26 @@ body {
   border: 0;
   margin: 4rem auto;
   display: inline-block;
+  outline: none;
+}
+
+.SignUp-input--search {
+  border: 1px solid #e5e5e5;
+  border-right: transparent;
+  height: inherit;
+  position: absolute;
+  z-index: 500;
+}
+
+/* .SignUp-input--search-active {
+} */
+
+.search-form,
+.search-form:focus {
+  width: 40rem;
+  /* border: 1px solid #e5e5e5; */
+  outline: none;
+  position: relative;
 }
 
 .SignUp-input-button {
@@ -233,6 +268,10 @@ body {
 
 .SignUp-input-button-search {
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAyMS4yIDIxLjkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDIxLjIgMjEuOTtmaWxsOiM2YzZjNmM7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdDB7ZmlsbDpub25lO3N0cm9rZTojNmM2YzZjO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1taXRlcmxpbWl0OjEwO308L3N0eWxlPjxnPjxnPjxnPjxwYXRoIGQ9Ik0xMCwyYzQuNCwwLDgsMy42LDgsOHYwLjFjMCw0LjQtMy42LDgtOCw4SDkuOWMtNC40LDAtOC0zLjYtOC04VjkuOUMyLDUuNSw1LjYsMiwxMCwyTDEwLDIgTTEwLDBMMTAsMEM0LjQsMCwwLDQuNSwwLDEwIHYwLjFjMCw1LjUsNC41LDEwLDEwLDEwaDAuMWM1LjUsMCwxMC00LjUsMTAtMTBWOS45QzIwLDQuNCwxNS42LDAsMTAsMEwxMCwweiIvPjwvZz48L2c+PGxpbmUgY2xhc3M9InN0MCIgeDE9IjIwLjUiIHkxPSIyMS4yIiB4Mj0iMTUuOCIgeTI9IjE2LjYiLz48L2c+PC9zdmc+);
+  background-color: transparent;
+  position: absolute;
+  z-index: 500;
+  right: 0rem;
 }
 
 .SignUp-input-button-Go::after {
@@ -261,4 +300,40 @@ body {
 .SignUp-input::placeholder {
   color: #1a1a1a;
   font-size: 1.2rem;
+}
+
+/* nav links styling */
+
+.nav__links {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.nav__link {
+  padding: 1rem;
+  position: relative;
+}
+
+.nav__link-pointer {
+  height: 0.7rem;
+  width: 1.3rem;
+  background-color: rgb(59, 59, 59);
+  position: absolute;
+  z-index: 10;
+  left: 45%;
+  transform: translateX(-45%);
+  clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.nav__link-pointer-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.navLinks__container {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
 }
