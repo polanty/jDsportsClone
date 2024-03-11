@@ -1,7 +1,18 @@
 .footer-info-link-container {
-  background-color: blue;
-
-  padding: 3rem 2rem;
+  background-color: white;
+  width: 100%;
+  padding: 3rem;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
+  border-top: 1px solid #e5e5e5;
+}
+
+.footer-link__container {
+  width: 100%;
+  display: block;
+}
+
+.footer-link__copyright {
+  display: flex;
+  justify-content: space-between;
 }

@@ -18,15 +18,16 @@
 .Overlay_inner {
   z-index: 499;
   background-color: white;
-  width: 90%;
+  width: 95%;
   top: 4.5%;
-  left: 5%;
   height: 25rem;
 
   /* inner styling for overlay contents */
   padding: 1rem;
   display: flex;
   gap: 3rem;
+
+  /* position so to position the arrow button for the overlay inner */
 }
 
 .Trending,
@@ -44,12 +45,14 @@
 }
 
 .Overlay__header {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 500;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.22;
   letter-spacing: -0.36px;
+  display: inline-block;
+  margin-bottom: 1rem;
 }
 /* .text-btn {
   width: 100px;

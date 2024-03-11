@@ -22,7 +22,7 @@ const FooterCard = () => {
         </p>
 
         <Button
-          btnclass={"footer-btn-primary btn-secondary"}
+          btnclass={"footer-btn-primary"} //btn-secondary
           title={"BUY GIFT CARDS"}
         />
       </div>
@@ -34,12 +34,11 @@ const FooterCard = () => {
           }
           cardimage={"card-image-smaller"}
         />
-        <h3>&nbsp;</h3>
         <p>
           Find your local store more, view opening hours and find out where you
-          can get delivery to collect your order from! <br /> Just enter your
-          postcode below to find your nearest store.
+          can get delivery to collect your order from!
         </p>
+        <p>Just enter your postcode below to find your nearest store.</p>
         <FormInput
           placeholder={"ENTER POSTCODE..."}
           signupinput={"SignUp-input"}

@@ -7,6 +7,8 @@ export const UserContext = createContext({
   search: "",
   setSearch: () => null,
   pastSearch: [],
+  isDropdownHovered: false,
+  setIsDropDownHovered: () => {},
 });
 
 //you then send out this context with a value encapsulated into a value
@@ -15,6 +17,7 @@ export const UserProvider = ({ children }) => {
   const [cartToggle, setCartToggle] = useState(false);
   const [search, setSearch] = useState("");
   const [pastSearch, setPastSearch] = useState([]);
+  const [isDropdownHovered, setIsDropDownHovered] = useState(false);
 
   const value = {
     cartToggle,
@@ -22,6 +25,8 @@ export const UserProvider = ({ children }) => {
     search,
     setSearch,
     pastSearch,
+    isDropdownHovered,
+    setIsDropDownHovered,
   };
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;

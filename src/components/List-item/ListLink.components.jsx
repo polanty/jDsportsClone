@@ -1,40 +1,46 @@
 import { NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { NavItemDropdown } from "../NavItemDropdown/NavItemDropdown.components";
+import { UserContext } from "../../Contexts/Cart.context";
 
 const LinkList = ({ ind, link }) => {
   //functionality to handle the pointer beneath the navigation links
   const [isHovered, setIsHovered] = useState(false);
-  // console.log(isHovered);
+  const { isDropdownHovered, setIsDropDownHovered } = useContext(UserContext);
 
   // Function to handle mouse enter event
-  const handleMouseOver = () => {
+  const handleLinkMouseOver = () => {
+    setIsDropDownHovered(true);
     setIsHovered(!isHovered);
   };
 
-  const handleMouseLeave = () => {
-    setIsHovered(!isHovered);
+  const handleLinkMouseLeave = () => {
+    setIsHovered(false);
+    setIsDropDownHovered(!isDropdownHovered);
   };
+
+  // isDropdownHovered && !isHovered ? setIsHovered(true) : setIsHovered(false);
 
   return (
-    <li
-      key={ind}
-      className={`nav__link`} //${ isHovered ? " nav__link-pointer" : ""}
-    >
-      <NavLink
-        className="nav-item"
-        to={link}
-        onMouseOver={handleMouseOver}
-        onMouseLeave={handleMouseLeave}
+    <>
+      <li
+        key={ind}
+        className={`nav__link`} //${ isHovered ? " nav__link-pointer" : ""}
+        onMouseEnter={handleLinkMouseOver}
+        onMouseLeave={handleLinkMouseLeave}
       >
-        {link[0].toUpperCase() + link.slice(1)}
-      </NavLink>
-      <div
-        className={`nav__link-pointer ${
-          isHovered ? "nav__link-pointer-active" : ""
-        }`}
-      ></div>
-    </li>
+        <NavLink className="nav-item" to={link}>
+          {link[0].toUpperCase() + link.slice(1)}
+        </NavLink>
+        <div
+          className={`nav__link-pointer ${
+            isHovered ? "nav__link-pointer-active" : " "
+          } `}
+        ></div>
+      </li>
+      {`${isHovered || isDropdownHovered} ` && <NavItemDropdown />}
+    </>
   );
 };
-
+//
 export default LinkList;

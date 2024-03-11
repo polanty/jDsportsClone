@@ -11,7 +11,7 @@ export const Card = ({ products }) => {
               title={`${title[0].toUpperCase() + title.slice(1)}`}
               btnclass={"btn-primary btn-secondary"}
             />
-            <img src={imageUrl} className="card-image" />
+            <img src={imageUrl} alt={`${title}`} className="card-image" />
           </div>
         );
       })}

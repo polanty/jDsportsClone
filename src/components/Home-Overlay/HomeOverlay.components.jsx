@@ -29,16 +29,21 @@ const OverLay = () => {
       ></div>
       <div className={`${Overlay_inner} ${cartToggle ? classAnimation : " "}`}>
         <div className="Trending">
-          <h2 className="Overlay__header">Trending</h2>
+          <h3 className="Overlay__header">Trending</h3>
         </div>
         <div className="recent__search">
-          <h2 className="Overlay__header">Recent Search</h2>
+          <h3 className="Overlay__header">Recent Searches</h3>
           <p className="recent__search-text">{search}</p>
         </div>
         <div className="recently__viewed">
-          <h2 className="Overlay__header">Recent Viewed</h2>
+          <h3 className="Overlay__header">Recently Viewed</h3>
         </div>
+        <div className={`nav__inner-link-pointer`}></div>
       </div>
+
+      {/* ${
+          isHovered ? "nav__link-pointer-active" : ""
+        } */}
     </>
   );
 };

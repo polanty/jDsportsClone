@@ -1,0 +1,80 @@
+.Courasel-container {
+  min-height: 90vh;
+  width: 100%;
+  background-color: blue;
+  position: relative;
+  overflow: hidden;
+}
+
+.courasel-inner {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.courasel-button {
+  background-color: rgba(150, 150, 150, 0.5);
+  color: white;
+  border-color: transparent;
+  border-radius: 100%;
+  cursor: pointer;
+  display: block;
+  font-size: 1.5rem;
+  font-family: serif;
+  height: 2.75rem;
+  margin: 0;
+  opacity: 0.75;
+  outline: none;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%);
+  width: 4rem;
+  height: 4rem;
+  z-index: 3;
+  transition: all 0.2s;
+}
+
+.courasel-button :hover {
+  background-color: rgba(150, 150, 150, 0.1);
+}
+
+.courasel-button__left {
+  left: 5%;
+}
+
+.courasel-button__right {
+  right: 3%;
+}
+
+.coursel-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  height: 2rem;
+  width: 10rem;
+  position: absolute;
+  z-index: 3;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.courasel-button__dots {
+  height: 0.8rem;
+  width: 0.8rem;
+  border-radius: 50%;
+  border: 1px solid #a9a9a9;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.courasel-button__dots:not(:last-child) {
+  margin-right: 0.8rem;
+}
+
+.courasel-button__dots.active {
+  background-color: white;
+}

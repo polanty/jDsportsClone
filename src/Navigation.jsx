@@ -1,5 +1,5 @@
 import { Outlet, NavLink } from "react-router-dom";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import category from "./assets/products/categories.js";
 // import { useState, useEffect } from "react";
 // import ButtonTestcomp from "./assets/ButtonComptest.jsx";
@@ -25,8 +25,6 @@ export const Navigation = () => {
   const productLink = products.map((cat) => cat.category.toLowerCase());
   const productLinkSet = new Set(productLink);
   const productLinkArr = [...productLinkSet];
-
-  console.log(productLinkSet);
 
   const onFormchangeHandler = (e) => {
     const value = e.target.value;
@@ -72,7 +70,7 @@ export const Navigation = () => {
       <nav className="nav__links">
         <ul className="navLinks__container">
           {productLinkArr.map((link, ind) => (
-            <LinkList link={link} ind={ind} />
+            <LinkList link={link} key={ind} ind={ind} />
           ))}
         </ul>
       </nav>
@@ -81,15 +79,3 @@ export const Navigation = () => {
     </>
   );
 };
-
-/* <li
-                key={ind}
-                className={`nav__link`} //${ isHovered ? " nav__link-pointer" : ""}
-                onMouseEnter={handleMouseEnter}
-                // onMouseLeave={handleMouseLeave}
-              >
-                <NavLink className="nav-item" to={link}>
-                  {link[0].toUpperCase() + link.slice(1)}
-                </NavLink>
-                <div className={`nav__link-pointer `}></div>
-              </li> */

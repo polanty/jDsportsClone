@@ -1,0 +1,16 @@
+.dropdown-container {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  min-height: 40rem;
+  background-color: white;
+  color: #fff;
+  z-index: 499;
+  border-top: 1px solid #ccc;
+}
+
+.active {
+  display: block;
+}
