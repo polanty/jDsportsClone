@@ -35,6 +35,8 @@ export const Navigation = () => {
     setCartToggle(!cartToggle);
   };
 
+  // console.log("render");
+
   return (
     <>
       <nav className="nav-container">
@@ -53,6 +55,7 @@ export const Navigation = () => {
             className="search-form"
           >
             <FormInput
+              containerClassType={"signUpLarge"}
               signupinput={"SignUp-input--search SignUp-input--search-active"}
               placeholder={"Search"}
               classType={"search"}

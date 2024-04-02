@@ -1,12 +1,12 @@
 import "./CouraselContainer.css";
 import Courasel from "../Courasel/Cousarel.components";
 import { Button } from "../Button.componets";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const CouraselContainer = () => {
   const [activeInd, setActiveInd] = useState(0);
 
-  console.log(activeInd);
+  // console.log(activeInd);
 
   const couraelElements = [
     {
@@ -81,9 +81,6 @@ const CouraselContainer = () => {
             }}
           ></span>
         ))}
-        {/* <span className="courasel-button__dots active"></span>
-        <span className="courasel-button__dots"></span>
-        <span className="courasel-button__dots"></span> */}
       </div>
     </div>
   );

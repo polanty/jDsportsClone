@@ -42,5 +42,5 @@ const Products = [
     route: "shop/mens",
   },
 ];
-console.log("working");
+
 export default Products;

@@ -1,3 +1,4 @@
+import { footerLinks, FooterImageLinks } from "../assets/products/footerLinks";
 import "../Footer_Info/FooterInfo.css";
 
 const FooterInfoLink = () => {
@@ -5,14 +6,20 @@ const FooterInfoLink = () => {
     <>
       <div className={"footer-info-link-container"}>
         <div className="footer-link__container">
-          <ul className="footer-link__section">
-            <h3 className="footer-link__header">header</h3>
-            <li className="footer-link__links">link</li>
-            <li className="footer-link__links">link</li>
-            <li className="footer-link__links">link</li>
-            <li className="footer-link__links">link</li>
-            <li className="footer-link__links">link</li>
-          </ul>
+          {footerLinks &&
+            footerLinks.map((linksObject, ind) => {
+              const { Title, links } = linksObject;
+              return (
+                <ul key={ind} className="footer-link__section">
+                  <h3 className="footer-link__header">{Title}</h3>
+                  {links.map((link, ind) => (
+                    <li key={ind} className="footer-link__links">
+                      {link}
+                    </li>
+                  ))}
+                </ul>
+              );
+            })}
         </div>
 
         <div className="footer-link__copyright">
@@ -29,8 +36,17 @@ const FooterInfoLink = () => {
             <span className="footer-text">
               we accept the following payment methods
             </span>
-            <span className="footer-text">
-              Copyright © 2024 JD Sports All rights reserved.
+            <span className="footer-image-container">
+              {FooterImageLinks.map((ele, i) => {
+                return (
+                  <img
+                    src={ele}
+                    alt="payment__logo"
+                    className="footer__payment-logo"
+                    key={i}
+                  />
+                );
+              })}
             </span>
           </div>
         </div>

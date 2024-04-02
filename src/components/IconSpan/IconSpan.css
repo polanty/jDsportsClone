@@ -1,8 +1,8 @@
 .IconSpan-button {
-  height: 4.85rem;
+  height: inherit;
   width: 5rem;
   background-color: #f8f8f8; /*  #f8f8f8 */
-  border-left: 1px solid #e5e5e5;
+  border: 1px solid #e5e5e5;
   color: #1a1a1a;
 
   background-repeat: no-repeat;

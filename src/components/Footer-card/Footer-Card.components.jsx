@@ -17,8 +17,9 @@ const FooterCard = () => {
         <h3>£5 - £300</h3>
         <p>
           The JD eGift card and JD gift card are available instore and online,
-          and can be sent via post, email or text. <br /> Please Note: eGift
-          Cards take upto 12 hours to deliver.
+          and can be sent via post, email or text.
+          <br />
+          Please Note: eGift Cards take upto 12 hours to deliver.
         </p>
 
         <Button
@@ -40,6 +41,7 @@ const FooterCard = () => {
         </p>
         <p>Just enter your postcode below to find your nearest store.</p>
         <FormInput
+          containerClassType={"signUpSmall"}
           placeholder={"ENTER POSTCODE..."}
           signupinput={"SignUp-input"}
           classType={"GO"}

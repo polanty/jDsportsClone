@@ -1,0 +1,29 @@
+.brands__container {
+  background-color: white;
+  max-width: 114rem;
+  /* width:100%;
+  display: inline-grid; */
+  height: 50vh;
+  margin: 5rem auto;
+}
+
+.brands__image-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.Brand__image {
+  cursor: pointer;
+  align-self: center;
+  width: 80%;
+  margin: 0 0.5em;
+  padding: 0.5em;
+  backface-visibility: hidden;
+  transition: all 0.8s ease;
+}
+
+.Brand__image:hover {
+  scale: 1.2;
+  opacity: 0.7;
+}

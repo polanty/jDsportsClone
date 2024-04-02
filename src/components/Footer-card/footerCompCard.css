@@ -23,8 +23,8 @@
 }
 
 .Footer_Card_card > p {
-  font-size: 1.2rem;
-  line-height: 180%;
+  font-size: 1.1rem;
+  line-height: 160%;
   text-align: center;
   flex: 1;
 }
@@ -35,6 +35,7 @@
   letter-spacing: 0.2rem;
 
   margin-bottom: 1rem;
+  position: relative;
 }
 
 /* .Footer_Card_Last_img {
@@ -58,7 +59,7 @@
 
   border: 1px solid #fff;
   font-weight: 700;
-  width: 100%;
+  width: 90%;
   padding: 1rem 3rem;
   display: flex;
   align-items: center;
@@ -69,6 +70,9 @@
 
   /* transform: translate(0, -80%); */
   transition: background-color 0.5s;
+  position: absolute;
+  position: absolute;
+  bottom: 3rem;
 }
 
 .footer-btn-primary:hover {

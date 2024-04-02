@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import "./styles.css";
 import { Navigation } from "./Navigation";
 import Home from "./Home";
+
 // import Shop from "./Shop";
 // import Checkout from "./Checkout";
 import MenRoute from "./Categories/Category-men/CategoryMen.routes";
@@ -12,17 +13,21 @@ import WomenRoute from "./Categories/Category-women/CategoryWomen.routes";
 import KidsRoute from "./Categories/Category-Kids/CategoryKids.routes";
 import BrandRoute from "./Categories/Category-brands/CategoryBrands.routes";
 import AccessoryRoute from "./Categories/Category-accessories/CategoryAccessories.routes";
+import ProductView from "./ProductView";
+import PageNotFound from "./PageNotFound";
 
 export default function App() {
   return (
     <Routes>
       <Route path="/" element={<Navigation />}>
         <Route index element={<Home />}></Route>
-        <Route path="men" element={<MenRoute />}></Route>
-        <Route path="women" element={<WomenRoute />}></Route>
-        <Route path="kids" element={<KidsRoute />}></Route>
-        <Route path="brands" element={<BrandRoute />}></Route>
-        <Route path="accessories" element={<AccessoryRoute />}></Route>
+        <Route path="men/*" element={<MenRoute />}></Route>
+        <Route path="women/*" element={<WomenRoute />}></Route>
+        <Route path="kids/*" element={<KidsRoute />}></Route>
+        <Route path="brands/*" element={<BrandRoute />}></Route>
+        <Route path="accessories/*" element={<AccessoryRoute />}></Route>
+        <Route path="productView" element={<ProductView />}></Route>
+        <Route path="*" element={<PageNotFound />}></Route>
       </Route>
     </Routes>
   );

@@ -1,0 +1,54 @@
+.brands__container {
+  max-width: 114rem;
+  margin: 5rem auto;
+}
+
+.product__header-container {
+  width: 70%;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  position: relative;
+}
+
+.TopPicksCategory__container {
+  width: 23%;
+}
+
+.TopPick__Btn {
+  border: 1px solid black;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+  letter-spacing: -0.4px;
+  line-height: 3rem;
+  padding: 0 3rem 0 3rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin: 0 auto;
+
+  background-color: white;
+  color: #000000b3;
+  transition: all 0.3s;
+}
+
+.TopPick__Btn.active {
+  background-color: black;
+  color: white;
+}
+
+/* .btn-primary:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+  } */
+
+.product__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

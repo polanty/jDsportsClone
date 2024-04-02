@@ -25,9 +25,10 @@ const SignUp = () => {
             onSubmit={() => {
               console.log(FormValues);
             }}
-            className="SignUp-Components"
+            className={`SignUp-Components`}
           >
             <FormInput
+              containerClassType={"signUpLarge"}
               signupinput={"SignUp-input"}
               placeholder={"Enter Email Address"}
               classType={"arrow"}
