@@ -2,4 +2,5 @@
   background-color: red;
   display: block;
   cursor: pointer;
+  position: relative;
 }

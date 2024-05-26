@@ -11,6 +11,15 @@
   border-top: 1px solid #ccc;
 }
 
+.dropdown-container:hover {
+  display: block;
+}
+
 .active {
   display: block;
+}
+
+.Dropdown_list_link {
+  background-color: black;
+  color: red;
 }

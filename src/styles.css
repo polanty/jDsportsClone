@@ -433,3 +433,65 @@ body {
 .logo_container {
   max-width: 30rem;
 }
+
+/* product view page each product */
+.Product__view-page {
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  background-color: #ccc;
+}
+
+/* Blog-container page css outlay */
+.BigImageLinkContainer {
+  max-width: 114rem;
+  margin: 0 auto;
+  background-color: red;
+}
+
+.BigImageLinkContainer_advert {
+  height: 15rem;
+  width: 100%;
+  background-color: orangered;
+  display: block;
+  margin-bottom: 5rem;
+  color: white;
+}
+
+.BigImagesLinkContainer_links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto; /*max-content */
+  gap: 2rem;
+  width: 100%;
+  height: 40rem;
+  max-height: 40rem;
+}
+
+.BigImageLinkContainer_link {
+  background-color: white;
+  border: 1px solid blue;
+}
+
+/* Blog-container page css layout */
+
+.Blog-container {
+  max-width: 114rem;
+  margin: 5rem auto;
+  /* background-color: blue; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.Blogs-link {
+  background-color: white;
+}
+
+.test-container2 {
+  display: flex;
+}
+
+.btn-test {
+  right: 20%;
+}

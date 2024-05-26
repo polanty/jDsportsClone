@@ -19,7 +19,7 @@
   z-index: 499;
   background-color: white;
   width: 95%;
-  top: 4.5%;
+  top: 3%;
   height: 25rem;
 
   /* inner styling for overlay contents */
@@ -36,7 +36,7 @@
 }
 
 .recently__viewed {
-  flex-grow: 1;
+  flex-basis: 1;
 }
 .Overlayactive,
 .Overlay_inner-active {

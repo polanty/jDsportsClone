@@ -4,6 +4,8 @@ import { Card } from "./components/card.components";
 import CouraselContainer from "./components/Courael-container/CouraselContainer.components";
 import Brands from "./sections/Brands/Brands.section";
 import TopPicks from "./sections/Top-Picks/TopPicks.section";
+import BigImageLink from "./sections/BigImagesLink/BigImagesLink";
+import Blogs from "./sections/Blogs/Blogs";
 
 const Home = () => {
   return (
@@ -12,6 +14,8 @@ const Home = () => {
       <Brands />
       <Card products={Products} />
       <TopPicks />
+      <BigImageLink />
+      <Blogs />
     </>
   );
 };

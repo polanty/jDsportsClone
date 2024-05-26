@@ -24,7 +24,7 @@ export const Navigation = () => {
 
   const productLink = products.map((cat) => cat.category.toLowerCase());
   const productLinkSet = new Set(productLink);
-  const productLinkArr = [...productLinkSet];
+  const productLinkArr = [...productLinkSet]; //...productLinkSet
 
   const onFormchangeHandler = (e) => {
     const value = e.target.value;
@@ -34,8 +34,6 @@ export const Navigation = () => {
   const cartToogleHandler = () => {
     setCartToggle(!cartToggle);
   };
-
-  // console.log("render");
 
   return (
     <>
@@ -73,7 +71,7 @@ export const Navigation = () => {
       <nav className="nav__links">
         <ul className="navLinks__container">
           {productLinkArr.map((link, ind) => (
-            <LinkList link={link} key={ind} ind={ind} />
+            <LinkList link={link} key={ind} ind={ind} navActive={link} />
           ))}
         </ul>
       </nav>

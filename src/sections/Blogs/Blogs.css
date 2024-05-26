@@ -1,0 +1,35 @@
+.Blogs-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+}
+
+.blog_content {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+.blog_header {
+  min-height: 65px;
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-align: left;
+  padding: 1.5rem 0 0 0;
+}
+
+.blog_snapshot {
+  margin-bottom: 1rem;
+  height: 9.2rem;
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 1.29;
+  text-align: left;
+  text-wrap: wrap;
+  /* padding: 1.6rem 0; */
+}
+
+.blog_navlink {
+  font-size: 20px;
+  font-weight: 500;
+}
