@@ -5,7 +5,7 @@ const AllProducts = () => {
   return (
     <>
       <div>Are presentation of all the products</div>
-      <p>This is the link {allproducts}</p>
+      <h1>This is the link {allproducts}</h1>
     </>
   );
 };

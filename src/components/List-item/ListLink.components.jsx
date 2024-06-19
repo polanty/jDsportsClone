@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import { useState, useContext, useEffect } from "react";
 import { NavItemDropdown } from "../NavItemDropdown/NavItemDropdown.components";
 import { UserContext } from "../../Contexts/Cart.context";
@@ -8,6 +8,8 @@ const LinkList = ({ ind, link, navActive }) => {
   const [isHovered, setIsHovered] = useState(false);
   const { isDropdownHovered, setIsDropDownHovered } = useContext(UserContext);
   const [activeLink, setActiveLink] = useState("");
+  const navigate = useNavigate();
+  const location = useLocation();
 
   let linkName;
   let currentLink;
@@ -39,8 +41,10 @@ const LinkList = ({ ind, link, navActive }) => {
         className={`nav__link`}
         onMouseEnter={handleLinkMouseOver}
         onMouseLeave={handleLinkMouseLeave}
+        // onClick={handleLinkMouseClick}
+        //to={link}
       >
-        <NavLink className="nav-item" to={link}>
+        <NavLink to={link} className="nav-item">
           {link[0].toUpperCase() + link.slice(1)}
         </NavLink>
         <div

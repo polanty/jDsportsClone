@@ -1,5 +1,7 @@
 .dropdown-container {
-  display: none;
+  /* display: none; */
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
   width: 100%;
   top: 100%;
@@ -9,14 +11,20 @@
   color: #fff;
   z-index: 499;
   border-top: 1px solid #ccc;
+  transition: all 0.2s ease-out;
+  transition-delay: 0.2s;
 }
 
 .dropdown-container:hover {
-  display: block;
+  /* display: block; */
+  opacity: 1;
+  visibility: visible;
 }
 
 .active {
-  display: block;
+  /* display: block; */
+  opacity: 1;
+  visibility: visible;
 }
 
 .Dropdown_list_link {

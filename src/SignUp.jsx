@@ -12,7 +12,7 @@ const SignUp = () => {
     e.preventDefault();
     const { name } = e.target;
     let value = e.target.value;
-    setFormState({ [name]: value });
+    setFormState({ ...formState, [name]: value });
   };
 
   return (

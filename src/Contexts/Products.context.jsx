@@ -53,7 +53,7 @@ export const ProductContextProvider = ({ children }) => {
     const found = cartItemContainer.find((ele) => ele.id === cartItemId);
 
     //check if the count is not more than 1
-    if (found.productCount === 1) {
+    if (found && found.productCount === 1) {
       return cartItemContainer.filter((ele) => ele !== found);
     }
 

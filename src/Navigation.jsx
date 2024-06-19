@@ -1,5 +1,5 @@
 import { Outlet, NavLink } from "react-router-dom";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, useRef } from "react";
 import category from "./assets/products/categories.js";
 // import { useState, useEffect } from "react";
 // import ButtonTestcomp from "./assets/ButtonComptest.jsx";
@@ -12,6 +12,7 @@ import Footer from "./Footer.jsx";
 
 //context imported for the cart drop down
 import { UserContext } from "./Contexts/Cart.context.jsx";
+import { productLinkUseRefFunction } from "./Utilities/helperFunctions.js";
 
 export const Navigation = () => {
   // Function to handle mouse leave event
@@ -20,11 +21,12 @@ export const Navigation = () => {
   const { cartToggle, setCartToggle, search, setSearch, pastSearch } =
     useContext(UserContext);
 
+  // products called from the category object
   const { products } = category;
 
-  const productLink = products.map((cat) => cat.category.toLowerCase());
-  const productLinkSet = new Set(productLink);
-  const productLinkArr = [...productLinkSet]; //...productLinkSet
+  //React useRef to store the unique categories available
+  //improve app runtime as storing array in useRef prevents re-render
+  const productLinkArr = productLinkUseRefFunction(products, useRef);
 
   const onFormchangeHandler = (e) => {
     const value = e.target.value;
@@ -70,9 +72,10 @@ export const Navigation = () => {
       </nav>
       <nav className="nav__links">
         <ul className="navLinks__container">
-          {productLinkArr.map((link, ind) => (
-            <LinkList link={link} key={ind} ind={ind} navActive={link} />
-          ))}
+          {productLinkArr &&
+            productLinkArr.map((link, ind) => (
+              <LinkList link={link} key={ind} ind={ind} navActive={link} />
+            ))}
         </ul>
       </nav>
       <Outlet />
