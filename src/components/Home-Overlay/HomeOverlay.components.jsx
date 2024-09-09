@@ -1,6 +1,8 @@
 import "../../components/Home-Overlay/HomeOverlay.css";
 import { useContext } from "react";
 import { UserContext } from "../../Contexts/Cart.context";
+import { ProductLiteralContext } from "../../Contexts/Products.context";
+import Product from "../IndividualProduct/Product.components";
 
 // const OverlayClases = {
 //     "Overlayactive" : "Overlayactive",
@@ -13,6 +15,7 @@ const OverLay = () => {
   const Overlay_inner = "Overlay_inner";
 
   const { cartToggle, setCartToggle, search } = useContext(UserContext);
+  const { recentlViewedContainer } = useContext(ProductLiteralContext);
 
   //overlay toggle functionality
   const handleOverlay = () => {
@@ -37,6 +40,13 @@ const OverLay = () => {
         </div>
         <div className="recently__viewed">
           <h3 className="Overlay__header">Recently Viewed</h3>
+          <div className="recently__viewed-item-container">
+            {recentlViewedContainer
+              .filter((_, ind) => ind < 4)
+              .map((product, ind) => (
+                <Product product={product} key={ind} />
+              ))}
+          </div>
         </div>
         <div className={`nav__inner-link-pointer`}></div>
       </div>

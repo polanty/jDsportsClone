@@ -8,8 +8,8 @@ const LinkList = ({ ind, link, navActive }) => {
   const [isHovered, setIsHovered] = useState(false);
   const { isDropdownHovered, setIsDropDownHovered } = useContext(UserContext);
   const [activeLink, setActiveLink] = useState("");
-  const navigate = useNavigate();
-  const location = useLocation();
+  // const navigate = useNavigate();
+  // const location = useLocation();
 
   let linkName;
   let currentLink;
@@ -41,7 +41,7 @@ const LinkList = ({ ind, link, navActive }) => {
         className={`nav__link`}
         onMouseEnter={handleLinkMouseOver}
         onMouseLeave={handleLinkMouseLeave}
-        // onClick={handleLinkMouseClick}
+        onClick={handleLinkMouseLeave}
         //to={link}
       >
         <NavLink to={link} className="nav-item">

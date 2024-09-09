@@ -4,6 +4,7 @@ import category from "../../assets/products/categories";
 import CouraselContainer from "../Courael-container/CouraselContainer.components";
 import BigImageLink from "../../sections/BigImagesLink/BigImagesLink";
 import Blogs from "../../sections/Blogs/Blogs";
+import GenericShopByCategory from "../GenericShopByCategory/GenericShopByCategory.components";
 import { useEffect, useRef, useState } from "react";
 import { uniqueProductForEachCategory } from "../../Utilities/helperFunctions";
 import RoundImageLinks from "../GenericTopPageLinks/RoundImageLinks";
@@ -22,7 +23,7 @@ const GenericPage = ({ routeName }) => {
 
     // Update the state with the filtered products
     setRouteProduct(filteredProducts);
-    console.log("routeProduct");
+    //console.log("routeProduct");
   }, [routeName]);
 
   const productCategories = uniqueProductForEachCategory(routeProduct);
@@ -63,6 +64,10 @@ const GenericPage = ({ routeName }) => {
         </ul>
         <CouraselContainer />
 
+        <GenericShopByCategory
+          routeName={routeName}
+          productCategories={productCategories}
+        />
         <BigImageLink />
         <Blogs />
       </div>

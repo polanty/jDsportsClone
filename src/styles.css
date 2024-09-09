@@ -14,6 +14,10 @@ html {
   font-size: 62.5%; /*converting 10px to 1 rem instead of 16px from all browser default */
 }
 
+#root {
+  position: relative;
+}
+
 /* trial for fonts */
 @font-face {
   font-family: "Gotham SSm A";

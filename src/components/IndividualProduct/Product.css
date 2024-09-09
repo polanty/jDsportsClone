@@ -4,3 +4,11 @@
   cursor: pointer;
   position: relative;
 }
+
+/* .Product-Div:not(:first-child) {
+  margin-left: 1rem;
+} */
+
+.Product-Div {
+  margin-right: 1rem;
+}

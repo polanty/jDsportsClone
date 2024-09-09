@@ -1,0 +1,25 @@
+.productview-container,
+.productview-spinner-container {
+  margin: 0 auto;
+  min-height: 50vh;
+  padding: 4rem 10rem;
+}
+
+.productview-container {
+  width: 90%;
+  display: grid;
+  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+}
+
+.productview-spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Individual-product {
+  background-color: red;
+  height: 35rem;
+}

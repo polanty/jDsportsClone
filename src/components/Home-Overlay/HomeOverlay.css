@@ -32,11 +32,12 @@
 
 .Trending,
 .recent__search {
-  flex-basis: 15rem;
+  flex-basis: 15%;
 }
 
 .recently__viewed {
-  flex-basis: 1;
+  flex-basis: 60%;
+  flex-grow: 1;
 }
 .Overlayactive,
 .Overlay_inner-active {
@@ -60,3 +61,9 @@
   background-color: red;
   color: white;
 } */
+
+.recently__viewed-item-container {
+  display: flex;
+  height: 80%;
+  /* justify-content: space-between; */
+}

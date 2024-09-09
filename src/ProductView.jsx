@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ProductLiteralContext } from "./Contexts/Products.context";
+import { UserContext } from "./Contexts/Cart.context";
 import category from "./assets/products/categories";
 import { Button } from "./components/Button.componets";
 
@@ -9,6 +10,12 @@ const ProductView = () => {
   const location = useLocation();
   const params = new URLSearchParams(location.search);
   const param = params.get("product");
+
+  const { cartToggle, setCartToggle } = useContext(UserContext);
+
+  useEffect(() => {
+    setCartToggle(cartToggle);
+  });
 
   const {
     cartItemContainer,
@@ -21,7 +28,7 @@ const ProductView = () => {
     totalPrice,
   } = useContext(ProductLiteralContext);
 
-  console.log(cartItemContainer);
+  //console.log(typeof param);
 
   const addToCart = () => {
     setCartItemContainer(addProductToCart(param));

@@ -1,0 +1,50 @@
+.GenericShopByCategory-container {
+  /* background-color: red; */
+  max-width: 114rem;
+  margin: 10rem auto;
+  padding: 1rem;
+}
+
+.GenericCategoryTitleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.GenericCategoryTitleContainer-link {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.Generic-Category {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Generic-Categories {
+  display: block;
+  width: 32%;
+  text-decoration: none;
+}
+
+.Generic-Categories-image {
+  display: block;
+  /* width: 100%; */
+  height: 35rem;
+  background-color: red;
+  transition: opacity 0.5s;
+  margin-bottom: 1rem;
+}
+
+.Generic-Categories-image:hover {
+  opacity: 0.8;
+}
+
+.Generic-Categories-text {
+  color: #000;
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-decoration: none;
+}

@@ -11,10 +11,13 @@ export const ProductLiteralContext = createContext({
   cartContainerCount: 0,
   setCartContainerCount: () => null,
   addToCart: () => null,
+  recentlViewedContainer: null,
+  setRecentlViewedContainer: () => null,
 });
 
 export const ProductContextProvider = ({ children }) => {
   const [cartItemContainer, setCartItemContainer] = useState([]);
+  const [recentlViewedContainer, setRecentlViewedContainer] = useState([]);
   const [cartItem, setCartItem] = useState(null);
   const [cartCount, setCartCount] = useState(0);
   const { products } = category;
@@ -79,6 +82,22 @@ export const ProductContextProvider = ({ children }) => {
     return acc + price;
   }, 0);
 
+  const recentlyViewedProducts = (cartItem) => {
+    //check if the item is already included in the array
+    let cartItemId = cartItem.id;
+    const found = recentlViewedContainer.find((ele) => ele.id === cartItemId);
+
+    const foundIndex = recentlViewedContainer.indexOf(found);
+
+    if (found) {
+      //return recentlViewedContainer
+      recentlViewedContainer.splice(foundIndex, 1);
+      //recentlViewedContainer.push(found);
+    }
+
+    recentlViewedContainer.unshift(cartItem);
+  };
+
   const value = {
     cartItemContainer,
     setCartItem,
@@ -88,6 +107,9 @@ export const ProductContextProvider = ({ children }) => {
     removeSingleItem,
     totalItems,
     totalPrice,
+    recentlViewedContainer,
+    recentlyViewedProducts,
+    setRecentlViewedContainer,
   };
   return (
     <ProductLiteralContext.Provider value={value}>
