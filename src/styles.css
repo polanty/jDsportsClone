@@ -89,6 +89,7 @@ body {
   justify-content: space-between;
   padding: 3rem;
   max-width: 1440px;
+  margin: 0 auto;
 }
 
 .form_container {

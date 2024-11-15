@@ -3,6 +3,7 @@
   width: 100%;
   display: flex;
   color: #fff;
+  /* max-height: 50rem; */
 }
 
 .Footer_Card_card,
@@ -10,7 +11,7 @@
   display: inline-block;
   background: linear-gradient(#2e2e2e, #2e2e2e);
   width: 33.3%;
-  max-height: 44rem;
+  /* max-height: 44rem; */
   /* for the button element  and last image*/
   position: relative;
 }

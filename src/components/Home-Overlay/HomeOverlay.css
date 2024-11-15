@@ -18,9 +18,12 @@
 .Overlay_inner {
   z-index: 499;
   background-color: white;
-  width: 95%;
-  top: 3%;
+  width: 90%;
+  /* top: 3%; */
   height: 25rem;
+  top: 30rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   /* inner styling for overlay contents */
   padding: 1rem;
