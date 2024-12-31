@@ -5,6 +5,7 @@ const FooterInfoLink = () => {
   return (
     <>
       <div className={"footer-info-link-container"}>
+        <div className="footer-link-outer-container">
         <div className="footer-link__container">
           {footerLinks &&
             footerLinks.map((linksObject, ind) => {
@@ -20,6 +21,7 @@ const FooterInfoLink = () => {
                 </ul>
               );
             })}
+        </div>
         </div>
 
         <div className="footer-link__copyright">

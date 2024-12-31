@@ -110,7 +110,7 @@ body {
   text-decoration: none;
   color: black;
   display: block;
-  padding: 0.5rem 1.5rem;
+  /* padding: 0.5rem 1.5rem; */
   margin-right: 0.3rem;
   font-size: 1.4rem;
   font-weight: 500;
@@ -263,7 +263,8 @@ body {
 .SignUp-Components {
   display: flex;
   align-items: center;
-  width: 100%;
+  min-width: 80%;
+  justify-content: center;
   height: 5.5rem;
 }
 
@@ -376,8 +377,8 @@ body {
 /* nav links styling */
 
 .nav__links {
-  width: 100;
-  margin: 0 auto;
+  width: 100%;
+  /* margin: 0 auto; */
   position: relative;
 }
 
@@ -426,11 +427,12 @@ body {
 }
 
 .navLinks__container {
-  max-width: 50%;
+  width: 60%;
   margin: 0 auto;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 /* Nav logo container */
@@ -443,15 +445,24 @@ body {
 .Product__view-page {
   position: relative;
   width: 100%;
-  height: 20rem;
-  background-color: #ccc;
+  height: 50vh;
+  max-width: 140rem;
+  margin: 0 auto;
+  background-color: #fbfbfb;
 }
 
 /* Blog-container page css outlay */
 .BigImageLinkContainer {
-  max-width: 114rem;
+  max-width: 140rem;
+
   margin: 0 auto;
   background-color: red;
+}
+
+@media screen and (max-width: 139rem) {
+  .BigImageLinkContainer {
+    padding: 0 3rem;
+  }
 }
 
 .BigImageLinkContainer_advert {
@@ -469,8 +480,8 @@ body {
   grid-template-rows: auto; /*max-content */
   gap: 2rem;
   width: 100%;
-  height: 40rem;
-  max-height: 40rem;
+  height: 60rem;
+  max-height: 60rem;
 }
 
 .BigImageLinkContainer_link {
@@ -481,7 +492,6 @@ body {
 /* Blog-container page css layout */
 
 .Blog-container {
-  max-width: 114rem;
   margin: 5rem auto;
   /* background-color: blue; */
   display: grid;
@@ -499,4 +509,12 @@ body {
 
 .btn-test {
   right: 20%;
+}
+
+/* Individual product session designs */
+
+.Individual__product-image {
+  display: inline-block;
+  height: 10rem;
+  width: 40rem;
 }

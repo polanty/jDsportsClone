@@ -2,19 +2,24 @@
   background-color: white;
   /* max-width: 140rem;
   margin: 0 auto; */
-  padding: 3rem 3rem 1rem;
+  /* padding: 3rem 3rem 1rem; */
   border: 0;
+}
+
+.footer-link-outer-container {
   border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 .footer-link__container {
-  width: 100%;
+  max-width: 140rem;
+  margin: 0 auto;
   display: block;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding-bottom: 7rem;
+  padding: 3rem 0 7rem;
 }
 
 .footer-link__section {
@@ -36,7 +41,8 @@
 
 .footer-link__copyright {
   display: block;
-  border-top: 1px solid #e5e5e5;
+  max-width: 140rem;
+  margin: auto;
   width: 100%;
   padding: 1rem;
   display: flex;

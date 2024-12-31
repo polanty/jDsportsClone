@@ -50,6 +50,7 @@ const ProductView = () => {
   const found = products.find((ele) => ele.id === param);
   return (
     <>
+      <div className="product__view-header"></div>
       <div className="Product__view-page">
         <h1>This is the product page that each product navigates too</h1>
         <p>{found.id}</p>
@@ -57,6 +58,13 @@ const ProductView = () => {
         <p>{found.category}</p>
         <h1>{totalItems}</h1>
         <h1>{totalPrice}</h1>
+        <div>
+          <img
+            src={found.image.full}
+            alt={found.name}
+            className="Individual__product-image"
+          />
+        </div>
 
         <div className="test-container2">
           <Button

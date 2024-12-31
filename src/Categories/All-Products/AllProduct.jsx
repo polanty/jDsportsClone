@@ -72,42 +72,45 @@ const AllProducts = () => {
   }, [previousPath, currentPath, cloudproducts, products, accessoriesRoutes]);
 
   return (
-    <div
-      className={
-        isLoading || (currentRouteProduct && currentRouteProduct.length < 1)
-          ? "productview-spinner-container"
-          : "productview-container"
-      }
-    >
-      {/* {isLoading ? <Spinner /> : ""} */}
+    <>
+      <div className="AllProduct__location-details">
+        <div className="AllProduct__location-innerContainer"></div>
+      </div>
+      <div
+        className={
+          isLoading || (currentRouteProduct && currentRouteProduct.length < 1)
+            ? "productview-spinner-container"
+            : "productview-container"
+        }
+      >
+        {isLoading ? (
+          <Spinner />
+        ) : (
+          currentRouteProduct &&
+          currentRouteProduct.map((product, ind) => {
+            return (
+              <Product
+                product={product}
+                key={ind}
+                classNAME={`Individual-product`}
+              />
+            );
+          })
+        )}
 
-      {isLoading ? (
-        <Spinner />
-      ) : (
-        currentRouteProduct &&
-        currentRouteProduct.map((product, ind) => {
-          return (
-            <Product
-              product={product}
-              key={ind}
-              classNAME={`Individual-product`}
-            />
-          );
-        })
-      )}
+        {currentRouteProduct && currentRouteProduct.length < 1 && (
+          <div className="productview-spinner-container">
+            <h1>NO PRODUCTS IN THIS CATEGORY</h1>
+          </div>
+        )}
 
-      {currentRouteProduct && currentRouteProduct.length < 1 && (
-        <div className="productview-spinner-container">
-          <h1>NO PRODUCTS IN THIS CATEGORY</h1>
-        </div>
-      )}
-
-      {error && (
-        <div className="productview-spinner-container">
-          <h1>{error.message}</h1>
-        </div>
-      )}
-    </div>
+        {error && (
+          <div className="productview-spinner-container">
+            <h1>{error.message}</h1>
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 

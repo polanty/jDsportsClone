@@ -23,15 +23,22 @@ const Product = ({ product, classNAME = "" }) => {
     return navigate(`/ProductView/?product=${product.id}`);
   };
   return (
-    <>
+    <div>
       <div onClick={onclickHnadler} className={`Product-Div ${classNAME}`}>
+        <img
+          src={product.image.full}
+          alt={product.name}
+          className="Product-Div__image"
+        />
+      </div>
+      <div className="Product-Div-description">
         <p>{product.id}</p>
         <p>{product.type}</p>
         <p>{product.category}</p>
         <p>{product.brand}</p>
         <p>{product.name}</p>
       </div>
-    </>
+    </div>
   );
 };
 

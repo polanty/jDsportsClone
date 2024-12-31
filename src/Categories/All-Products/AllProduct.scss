@@ -6,7 +6,7 @@
 }
 
 .productview-container {
-  width: 90%;
+  max-width: 140rem;
   display: grid;
   margin: auto;
   grid-template-columns: repeat(3, 1fr);
@@ -22,4 +22,17 @@
 .Individual-product {
   background-color: red;
   height: 35rem;
+}
+
+.AllProduct__location-details {
+  width: 100%;
+  height: 3rem;
+  background-color: red;
+}
+
+.AllProduct__location-innerContainer {
+  max-width: 140rem;
+  height: 100%;
+  background-color: blue;
+  margin: 0 auto;
 }
