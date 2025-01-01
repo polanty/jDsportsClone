@@ -23,8 +23,8 @@ const Product = ({ product, classNAME = "" }) => {
     return navigate(`/ProductView/?product=${product.id}`);
   };
   return (
-    <div>
-      <div onClick={onclickHnadler} className={`Product-Div ${classNAME}`}>
+    <div className={classNAME}>
+      <div onClick={onclickHnadler} className={`Product-Div`}>
         <img
           src={product.image.full}
           alt={product.name}
@@ -32,11 +32,8 @@ const Product = ({ product, classNAME = "" }) => {
         />
       </div>
       <div className="Product-Div-description">
-        <p>{product.id}</p>
-        <p>{product.type}</p>
-        <p>{product.category}</p>
-        <p>{product.brand}</p>
-        <p>{product.name}</p>
+        <p className="Product-Div-name">{product.name}</p>
+        <p className="Product-Div-price">${product.price}</p>
       </div>
     </div>
   );

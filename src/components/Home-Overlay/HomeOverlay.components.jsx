@@ -44,7 +44,11 @@ const OverLay = () => {
             {recentlViewedContainer
               .filter((_, ind) => ind < 4)
               .map((product, ind) => (
-                <Product product={product} key={ind} />
+                <Product
+                  product={product}
+                  key={ind}
+                  classNAME={`product-view__small`}
+                />
               ))}
           </div>
         </div>

@@ -1,8 +1,10 @@
-import { useLocation } from "react-router-dom";
-import { useState, useEffect, useMemo } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect, useMemo, useContext } from "react";
 import Spinner from "../../components/Spinner/Spinner.components";
 import { getAllProductsFromCloud } from "../../Utilities/cloudfile";
 import Product from "../../components/IndividualProduct/Product.components";
+import { ProductLiteralContext } from "../../Contexts/Products.context";
+import LocationMap from "../../components/Location-Map/LocationMap.components";
 import "../All-Products/AllProduct.scss";
 
 const AllProducts = () => {
@@ -17,8 +19,14 @@ const AllProducts = () => {
   const previousPath = pathname.split("/")[1].toLocaleLowerCase();
   const currentPath = pathname.split("/")[2].toLocaleLowerCase();
 
+  //The current location path
+  const locationPath = pathname.split("/");
+
   // UseMemo to memoize accessoriesRoutes
   const accessoriesRoutes = useMemo(() => ["men", "women", "kids"], []);
+
+  //recently viewed container context
+  const { recentlViewedContainer } = useContext(ProductLiteralContext);
 
   useEffect(() => {
     // fetching products from the cloud \
@@ -73,9 +81,23 @@ const AllProducts = () => {
 
   return (
     <>
-      <div className="AllProduct__location-details">
-        <div className="AllProduct__location-innerContainer"></div>
-      </div>
+      <LocationMap locationPath={locationPath}></LocationMap>
+
+      {/* <div className="AllProduct__location-details">
+        <div className="AllProduct__location-innerContainer">
+          <Link className="AllProduct__location-innerLink" to={"/"}>
+            Home{" "}
+          </Link>
+          {locationPath.map(
+            (link, ind) =>
+              link.length > 0 && (
+                <p key={ind} className="AllProduct__location-innerLink">
+                  &#11166; {link}
+                </p>
+              )
+          )}
+        </div>
+      </div> */}
       <div
         className={
           isLoading || (currentRouteProduct && currentRouteProduct.length < 1)
@@ -110,24 +132,22 @@ const AllProducts = () => {
           </div>
         )}
       </div>
+
+      <div className="ProductView__recentlyViewed">
+        <div className="ProductView__recentlyViewed-innerContainer">
+          <h3 className="footer-link__header">Recently Viewed</h3>
+          <div className="recently__viewed-item-container">
+            {recentlViewedContainer
+              .filter((_, ind) => ind < 5)
+              .map((product, ind) => (
+                <Product product={product} key={ind} />
+              ))}
+          </div>
+        </div>
+      </div>
     </>
   );
 };
 
-// {currentRouteProduct.length ? (
-//   currentRouteProduct.map((product, ind) => {
-//     return (
-//       <Product product={product} classNAME={`Individual-product`} />
-//       // <div className="Individual-product" key={ind}>
-//       //   <h1>{product.id}</h1>
-//       //   <h1>{product.brand}</h1>
-//       //   <h1>{product.type}</h1>
-//       // </div>
-//     );
-//   })
-// ) : (
-//   <div>
-//     <h1>NO PRODUCTS IN THIS CATEGORY</h1>
-//   </div>
-// )}
+// export default products;
 export default AllProducts;
