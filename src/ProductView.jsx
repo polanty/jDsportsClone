@@ -1,10 +1,11 @@
 import { getAllProductsFromCloud } from "./Utilities/cloudfile";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { ProductLiteralContext } from "./Contexts/Products.context";
 import { UserContext } from "./Contexts/Cart.context";
 //import category from "./assets/products/categories";
 import LocationMap from "./components/Location-Map/LocationMap.components";
+import RecentlyViewedContainer from "./components/Recenetly-Viewed/Recently-Viewed.components";
 import { Button } from "./components/Button.componets";
 
 const ProductView = () => {
@@ -17,8 +18,10 @@ const ProductView = () => {
   const [cloudproducts, setCloudProducts] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsloading] = useState(true);
+  const navigate = useNavigate();
 
   const {
+    recentlViewedContainer,
     cartItemContainer,
     setCartItem,
     addToCart: addProductToCart,
@@ -28,6 +31,8 @@ const ProductView = () => {
     totalItems,
     totalPrice,
   } = useContext(ProductLiteralContext);
+
+  console.log(cartItemContainer);
 
   //The current location path
   const { pathname } = location;
@@ -70,6 +75,10 @@ const ProductView = () => {
     setCartItemContainer(removeSingleItem(param));
   };
 
+  const CallNavigate = () => {
+    navigate("/Checkout");
+  };
+
   if (!param) {
     return (
       <>
@@ -97,27 +106,35 @@ const ProductView = () => {
             <img
               src={found.image.full}
               alt={found.name}
-              className="Product-Div__image"
+              className="ProductView-Div__image"
             />
           </div>
 
-          <h1>{totalItems}</h1>
-          <h1>{totalPrice}</h1>
+          {/* <h1>{totalItems}</h1>
+          <h1>{totalPrice}</h1> */}
         </div>
 
         <div className="description-container">
+          <h1 className="Product-View__title">{found.name}</h1>
+          <h3 className="Product-View__price">{`$${found.price}`}</h3>
           <Button
-            btnclass={"btn-primary"}
+            btnclass={"btn-primary__addToCart"}
             title={"Add to Cart"}
             onClick={addToCart}
           />
           <Button
             btnclass={"btn-primary btn-test"}
             title={"Delete"}
-            onClick={removeItem}
+            onClick={CallNavigate}
           />
         </div>
       </div>
+
+      {/* Recently viewed container  */}
+
+      <RecentlyViewedContainer
+        recentlViewedContainer={recentlViewedContainer}
+      />
     </>
   );
 };
