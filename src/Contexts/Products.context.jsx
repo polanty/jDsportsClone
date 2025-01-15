@@ -20,10 +20,10 @@ export const ProductContextProvider = ({ children }) => {
   const [recentlViewedContainer, setRecentlViewedContainer] = useState([]);
   const [cartItem, setCartItem] = useState(null);
   const [cartCount, setCartCount] = useState(0);
-  const { products } = category;
+  // const { products } = category;
 
   // functionality to add items to the cart array
-  const addToCart = (cartItemId) => {
+  const addToCart = (products = [], cartItemId) => {
     //check if the item is already included in the array
     const found = cartItemContainer.find((ele) => ele.id === cartItemId);
 

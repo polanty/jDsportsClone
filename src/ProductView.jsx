@@ -32,7 +32,7 @@ const ProductView = () => {
     totalPrice,
   } = useContext(ProductLiteralContext);
 
-  console.log(cartItemContainer);
+  // console.log(cartItemContainer);
 
   //The current location path
   const { pathname } = location;
@@ -48,6 +48,8 @@ const ProductView = () => {
         const pulledProducts = await getAllProductsFromCloud();
 
         setIsloading(false);
+
+        // setCartItemContainer(pulledProducts[0]?.products || []);
         setCloudProducts(pulledProducts[0]?.products || []);
       } catch (error) {
         setError(error);
@@ -56,6 +58,8 @@ const ProductView = () => {
 
     fetchProductsFromCloud();
   }, [param]);
+
+  //setCartItemContainer
 
   useEffect(() => {
     setCartToggle(cartToggle);
@@ -67,7 +71,7 @@ const ProductView = () => {
   const products = cloudproducts; //Actual products from the firebase clouds
 
   const addToCart = () => {
-    setCartItemContainer(addProductToCart(param));
+    setCartItemContainer(addProductToCart(products, param));
   };
 
   const removeItem = () => {
@@ -88,7 +92,6 @@ const ProductView = () => {
   }
 
   const found = products && products.find((ele) => ele.id === param);
-  // console.log(found);
 
   if (!found) {
     return <p>Product not found</p>;
