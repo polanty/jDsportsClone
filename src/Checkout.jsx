@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import { ProductLiteralContext } from "./Contexts/Products.context";
 import LocationMap from "./components/Location-Map/LocationMap.components";
 import { Button } from "./components/Button.componets";
+import { FooterImageLinks } from "./assets/products/footerLinks";
 
 const Checkout = () => {
   const location = useLocation();
@@ -14,9 +15,7 @@ const Checkout = () => {
   const [error, setError] = useState(null);
 
   const {
-    recentlViewedContainer,
     cartItemContainer,
-    setCartItem,
     addToCart: addProductToCart,
     setCartItemContainer,
     removeItemsFromCart,
@@ -90,7 +89,56 @@ const Checkout = () => {
         </div>
 
         <div className="checkOut__container__payment">
-          <h1>Payments</h1>
+          <div className="shipping__container">
+            <div className="qualified__delivery">
+              <h3> You have qualified for</h3>
+              <h3> FREE Standard Delivery</h3>
+            </div>
+
+            <div className="standard_delivery">
+              <h1 className="standard_delivery--heading">
+                When will my order arrive?
+              </h1>
+
+              <div className="standard_delivery--details">
+                <h1>Click & Collect (Free)</h1>
+                <p>Collect within 3 - 5 working days</p>
+                <p>Store will keep for 14 days</p>
+              </div>
+
+              <div className="standard_delivery--details">
+                <h1>Same Day Click & Collect (Free)</h1>
+                <p>Collect within the same day</p>
+                <p>Order before 3pm for select stores</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="price__container">
+            <div className="total--price__container">
+              <h3 className="basket__totale">Basket Total</h3>
+
+              <h3 className="basket__total--price">{`${totalPrice}$`}</h3>
+            </div>
+
+            <Button
+              btnclass={"btn-primary btn-checkout"}
+              title={"Checkout securely"}
+              // onClick={CallNavigate}
+            />
+            <div className="payment-icon__container">
+              {FooterImageLinks.filter((_, i) => i < 4).map((ele, i) => {
+                return (
+                  <img
+                    src={ele}
+                    alt="payment__logo"
+                    className="footer__payment-logo"
+                    key={i}
+                  />
+                );
+              })}
+            </div>
+          </div>
         </div>
       </div>
     </>

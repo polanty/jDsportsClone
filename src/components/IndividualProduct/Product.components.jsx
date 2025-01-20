@@ -4,7 +4,7 @@ import { ProductLiteralContext } from "../../Contexts/Products.context";
 import { UserContext } from "../../Contexts/Cart.context";
 import "../../components/IndividualProduct/Product.css";
 
-const Product = ({ product, classNAME = "" }) => {
+const Product = ({ product, classNAME = "", classNAME2 = "" }) => {
   const navigate = useNavigate();
 
   const { recentlyViewedProducts } = useContext(ProductLiteralContext);
@@ -24,11 +24,11 @@ const Product = ({ product, classNAME = "" }) => {
   };
   return (
     <div className={classNAME}>
-      <div onClick={onclickHnadler} className={`Product-Div`}>
+      <div onClick={onclickHnadler} className={`Product-Div ${classNAME}`}>
         <img
           src={product.image.full}
           alt={product.name}
-          className="Product-Div__image"
+          className={`Product-Div__image `}
         />
       </div>
       <div className="Product-Div-description">

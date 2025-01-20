@@ -20,7 +20,8 @@
   background-color: white;
   width: 90%;
   /* top: 3%; */
-  height: 25rem;
+  height: 35rem;
+
   top: 30rem;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -69,4 +70,10 @@
   display: flex;
   height: 80%;
   /* justify-content: space-between; */
+}
+
+.recentlViewedContainer-product-view {
+  height: 90%;
+  width: 100%;
+  object-fit: cover;
 }

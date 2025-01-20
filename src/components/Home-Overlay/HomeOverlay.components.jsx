@@ -48,6 +48,7 @@ const OverLay = () => {
                   product={product}
                   key={ind}
                   classNAME={`product-view__small`}
+                  classNAME2="recentlViewedContainer-product-view"
                 />
               ))}
           </div>
