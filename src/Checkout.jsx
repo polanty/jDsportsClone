@@ -5,6 +5,7 @@ import { ProductLiteralContext } from "./Contexts/Products.context";
 import LocationMap from "./components/Location-Map/LocationMap.components";
 import { Button } from "./components/Button.componets";
 import { FooterImageLinks } from "./assets/products/footerLinks";
+import StripeForm from "./components/Stripe-payment/stripe.components";
 
 const Checkout = () => {
   const location = useLocation();
@@ -24,6 +25,8 @@ const Checkout = () => {
     totalPrice,
   } = useContext(ProductLiteralContext);
 
+  // console.log(process.env.REACT_APP_API_URL);
+
   //The current location path
   const { pathname } = location;
   const locationPath = pathname.split("/");
@@ -39,7 +42,7 @@ const Checkout = () => {
           {cartItemContainer.map((product, ind) => {
             return (
               <div key={ind} className="checkout__products">
-                {console.log(product)}
+                {/* {console.log(product)} */}
                 <div className="checkout__products-imageContainer">
                   <img
                     src={product.image.full}
@@ -126,6 +129,8 @@ const Checkout = () => {
               title={"Checkout securely"}
               // onClick={CallNavigate}
             />
+
+            <StripeForm />
             <div className="payment-icon__container">
               {FooterImageLinks.filter((_, i) => i < 4).map((ele, i) => {
                 return (
