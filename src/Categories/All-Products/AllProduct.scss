@@ -11,6 +11,7 @@
   margin: auto;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1rem;
+  place-items: center;
 }
 
 .productview-spinner-container {

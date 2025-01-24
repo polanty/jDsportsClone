@@ -138,6 +138,18 @@ body {
   object-fit: cover;
 }
 
+.card-image--banner {
+  height: 100%;
+  display: block;
+  width: 100%;
+  object-fit: contain;
+  transition: all 2s ease;
+}
+
+/* .card-image--banner:hover {
+  transform: scale(0.8);
+} */
+
 .card-image-small {
   max-width: 20rem;
 }
@@ -470,7 +482,7 @@ body {
 .Product-Div__image-Container {
   width: 100%;
   height: 100%;
-  /* aspect-ratio: 3 / 2; */
+  aspect-ratio: 3 / 2;
 }
 
 .ProductView-Div__image {
@@ -488,6 +500,7 @@ body {
   place-items: center;
   align-items: center;
   justify-content: center;
+  flex-basis: 35%;
 }
 
 .Product-View__title {
@@ -503,7 +516,7 @@ body {
 
 .btn-primary__addToCart {
   background-color: #00a98e;
-  margin-right: 3rem;
+  /* margin-right: 3rem; */
   width: 80%;
   padding: 1.3rem 1.5rem;
   outline: none;
@@ -525,7 +538,7 @@ body {
   max-width: 140rem;
 
   margin: 0 auto;
-  background-color: red;
+  /* background-color: red; */
 }
 
 @media screen and (max-width: 139rem) {
@@ -537,7 +550,7 @@ body {
 .BigImageLinkContainer_advert {
   height: 15rem;
   width: 100%;
-  background-color: orangered;
+  /* background-color: orangered; */
   display: block;
   margin-bottom: 5rem;
   color: white;
@@ -549,8 +562,7 @@ body {
   grid-template-rows: auto; /*max-content */
   gap: 2rem;
   width: 100%;
-  height: 60rem;
-  max-height: 60rem;
+  height: fit-content;
 }
 
 .BigImageLinkContainer_link {
@@ -586,6 +598,11 @@ body {
   display: inline-block;
   height: 10rem;
   width: 40rem;
+}
+
+.Individual-product {
+  width: 80%;
+  height: 100%;
 }
 
 /* checkout container css design */
