@@ -21,7 +21,7 @@ export const Navigation = () => {
   const { cartToggle, setCartToggle, search, setSearch, pastSearch } =
     useContext(UserContext);
 
-  const { totalItems } = useContext(ProductLiteralContext);
+  const { totalItems, cartItemContainer } = useContext(ProductLiteralContext);
   // products called from the category object
   const { products } = category;
 
@@ -76,18 +76,20 @@ export const Navigation = () => {
           </form>
           <IconSpan className={"IconSpan-button-account"} />
           <IconSpan className={"IconSpan-button-basket"} />
-          <span className="Basket__special--container">
-            <IconSpan
-              className={"IconSpan-button-favorite"}
-              onMouseEnter={handleCartHover}
-              onMouseLeave={handleCartLeave}
-            />
-            <span className="totalCartItems">{totalItems}</span>
+          <span
+            className="Basket__special--container"
+            onMouseEnter={handleCartHover}
+            onMouseLeave={handleCartLeave}
+          >
+            <IconSpan className={"IconSpan-button-favorite"} />
+            {cartItemContainer.length ? (
+              <span className="totalCartItems">{totalItems}</span>
+            ) : (
+              ""
+            )}
 
             {onHover && (
               <BasketContainer
-                onMouseEnter={handleCartHover} // Keep it visible when hovered
-                onMouseLeave={handleCartLeave} // Hide when the hover leaves
                 style={{
                   position: "absolute",
                   top: "100%",

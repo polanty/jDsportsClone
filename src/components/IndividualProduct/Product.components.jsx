@@ -24,7 +24,7 @@ const Product = ({ product, classNAME = "", classNAME2 = "" }) => {
   };
   return (
     <div className={classNAME}>
-      <div onClick={onclickHnadler} className={`Product-Div ${classNAME}`}>
+      <div onClick={onclickHnadler} className={`Product-Div`}>
         <img
           src={product.image.full}
           alt={product.name}

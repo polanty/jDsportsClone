@@ -2,7 +2,7 @@
   position: absolute;
   background-color: white;
   z-index: 100;
-  transform: translateX(-85%);
+  transform: translateX(-86%);
   width: 45rem;
   overflow: hidden;
   padding: 1rem;
@@ -11,9 +11,9 @@
   box-shadow: 2px 2px 2px 2px #ccc;
 }
 
-.Basket__Container:hover {
+/* .Basket__Container:hover {
   display: block;
-}
+} */
 
 .small-product__listing {
   height: 11rem;

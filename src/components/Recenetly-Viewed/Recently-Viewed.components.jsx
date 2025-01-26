@@ -10,7 +10,11 @@ const RecentlyViewedContainer = ({ recentlViewedContainer }) => {
           {recentlViewedContainer
             .filter((_, ind) => ind < 5)
             .map((product, ind) => (
-              <Product product={product} key={ind} />
+              <Product
+                product={product}
+                key={ind}
+                classNAME={`recentlyViewed__product`}
+              />
             ))}
         </div>
       </div>

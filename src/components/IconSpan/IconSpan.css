@@ -20,10 +20,14 @@
 }
 
 .Basket__special--container {
-  display: block;
+  display: inline-block;
   position: relative;
   /* width: 100%; */
   height: 100%;
+}
+
+.Basket__special--container:hover .basket-container {
+  display: block;
 }
 
 .IconSpan-button-account {

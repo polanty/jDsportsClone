@@ -6,6 +6,7 @@ import { UserContext } from "./Contexts/Cart.context";
 //import category from "./assets/products/categories";
 import LocationMap from "./components/Location-Map/LocationMap.components";
 import RecentlyViewedContainer from "./components/Recenetly-Viewed/Recently-Viewed.components";
+import Spinner from "./components/Spinner/Spinner.components";
 import { Button } from "./components/Button.componets";
 
 const ProductView = () => {
@@ -18,21 +19,22 @@ const ProductView = () => {
   const [cloudproducts, setCloudProducts] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsloading] = useState(true);
-  const navigate = useNavigate();
 
   const {
     recentlViewedContainer,
-    cartItemContainer,
-    setCartItem,
+
     addToCart: addProductToCart,
     setCartItemContainer,
-    removeItemsFromCart,
-    removeSingleItem,
-    totalItems,
-    totalPrice,
   } = useContext(ProductLiteralContext);
 
-  // console.log(cartItemContainer);
+  // style for spinner
+  const containerStyle = {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100vh", // Full viewport height
+    width: "100vw", // Full viewport width
+  };
 
   //The current location path
   const { pathname } = location;
@@ -74,27 +76,18 @@ const ProductView = () => {
     setCartItemContainer(addProductToCart(products, param));
   };
 
-  const removeItem = () => {
-    // setCartItemContainer(removeItemsFromCart(param));
-    setCartItemContainer(removeSingleItem(param));
-  };
-
-  const CallNavigate = () => {
-    navigate("/Checkout");
-  };
-
   if (!param) {
-    return (
-      <>
-        <h1>NO PRODUCT LISTED</h1>
-      </>
-    );
+    return <h1 style={containerStyle}>Product not found</h1>;
   }
 
   const found = products && products.find((ele) => ele.id === param);
 
   if (!found) {
-    return <p>Product not found</p>;
+    return (
+      <div style={containerStyle}>
+        <Spinner />
+      </div>
+    );
   }
 
   return (
@@ -124,11 +117,6 @@ const ProductView = () => {
             btnclass={"btn-primary__addToCart"}
             title={"Add to Cart"}
             onClick={addToCart}
-          />
-          <Button
-            btnclass={"btn-primary btn-test"}
-            title={"Delete"}
-            onClick={CallNavigate}
           />
         </div>
       </div>

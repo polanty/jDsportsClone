@@ -10,8 +10,10 @@
   display: grid;
   margin: auto;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
-  place-items: center;
+  grid-template-rows: 1fr; /* Explicit first row */
+  grid-auto-rows: 1fr; /* all auto rows*/
+  grid-gap: 2rem;
+  // place-items: center;
 }
 
 .productview-spinner-container {
