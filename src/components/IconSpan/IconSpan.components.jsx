@@ -1,7 +1,9 @@
 import "./IconSpan.css";
 
-const IconSpan = ({ className }) => {
-  return <span className={`${className} IconSpan-button`}></span>;
+const IconSpan = ({ className, ...otherProp }) => {
+  return (
+    <span className={`${className} IconSpan-button`} {...otherProp}></span>
+  );
 };
 
 export default IconSpan;

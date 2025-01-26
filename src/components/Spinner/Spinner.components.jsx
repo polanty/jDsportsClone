@@ -1,9 +1,13 @@
 import "./Spinner.style.css";
 
-const Spinner = () => {
+const Spinner = ({ spinnerOptions }) => {
   return (
     <>
-      <div className="SpinnerContainer"></div>
+      {spinnerOptions ? (
+        <div className={spinnerOptions}></div>
+      ) : (
+        <div className={"SpinnerContainer"}></div>
+      )}
     </>
   );
 };

@@ -1,5 +1,5 @@
 import { useState, createContext } from "react";
-import category from "../assets/products/categories";
+// import category from "../assets/products/categories";
 
 // one array holds all the objects that will be rendered to the cart items;
 
@@ -20,6 +20,9 @@ export const ProductContextProvider = ({ children }) => {
   const [recentlViewedContainer, setRecentlViewedContainer] = useState([]);
   const [cartItem, setCartItem] = useState(null);
   const [cartCount, setCartCount] = useState(0);
+  const [stripePaymentSuccessfull, setStripePaymentSuccessfull] =
+    useState(false);
+  const [stripePaymentError, setStripePaymentError] = useState(false);
   // const { products } = category;
 
   // functionality to add items to the cart array
@@ -79,7 +82,12 @@ export const ProductContextProvider = ({ children }) => {
 
   const totalPrice = cartItemContainer.reduce((acc, item) => {
     const price = item.productCount * item.price;
-    return acc + price;
+    let totalBeforeTrunc = acc + price;
+    let total = Math.trunc(totalBeforeTrunc * 100) / 100;
+
+    return total;
+
+    // return Math.trunc(total * 100) / 100;
   }, 0);
 
   const recentlyViewedProducts = (cartItem) => {
@@ -110,6 +118,12 @@ export const ProductContextProvider = ({ children }) => {
     recentlViewedContainer,
     recentlyViewedProducts,
     setRecentlViewedContainer,
+
+    // stripe payment  usestate
+    stripePaymentSuccessfull,
+    setStripePaymentSuccessfull,
+    stripePaymentError,
+    setStripePaymentError,
   };
   return (
     <ProductLiteralContext.Provider value={value}>

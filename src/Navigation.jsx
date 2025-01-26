@@ -1,13 +1,13 @@
 import { Outlet, NavLink } from "react-router-dom";
 import { useContext, useEffect, useState, useRef } from "react";
 import category from "./assets/products/categories.js";
-// import { useState, useEffect } from "react";
-// import ButtonTestcomp from "./assets/ButtonComptest.jsx";
+import { ProductLiteralContext } from "./Contexts/Products.context.jsx";
 import LinkList from "./components/List-item/ListLink.components.jsx";
 import JdLogoDark from "./components/JdSportLogo/LogoDark.components.jsx";
 import FormInput from "./components/Form-input/Form-input.components.jsx";
 import IconSpan from "./components/IconSpan/IconSpan.components.jsx";
 import OverLay from "./components/Home-Overlay/HomeOverlay.components.jsx";
+import BasketContainer from "./components/BasketContainer/BasketContainer.component.jsx";
 import Footer from "./Footer.jsx";
 
 //context imported for the cart drop down
@@ -21,12 +21,15 @@ export const Navigation = () => {
   const { cartToggle, setCartToggle, search, setSearch, pastSearch } =
     useContext(UserContext);
 
+  const { totalItems } = useContext(ProductLiteralContext);
   // products called from the category object
   const { products } = category;
 
   //React useRef to store the unique categories available
   //improve app runtime as storing array in useRef prevents re-render
   const productLinkArr = productLinkUseRefFunction(products, useRef);
+
+  const [onHover, setOnHover] = useState(false);
 
   const onFormchangeHandler = (e) => {
     const value = e.target.value;
@@ -36,6 +39,11 @@ export const Navigation = () => {
   const cartToogleHandler = () => {
     setCartToggle(!cartToggle);
   };
+
+  // Onhover cart item
+  const handleCartHover = () => setOnHover(true);
+
+  const handleCartLeave = () => setOnHover(false);
 
   return (
     <>
@@ -63,11 +71,35 @@ export const Navigation = () => {
               name="text"
               onChange={onFormchangeHandler}
               onClick={cartToogleHandler}
+              Basket__special--container
             />
           </form>
           <IconSpan className={"IconSpan-button-account"} />
           <IconSpan className={"IconSpan-button-basket"} />
-          <IconSpan className={"IconSpan-button-favorite"} />
+          <span className="Basket__special--container">
+            <IconSpan
+              className={"IconSpan-button-favorite"}
+              onMouseEnter={handleCartHover}
+              onMouseLeave={handleCartLeave}
+            />
+            <span className="totalCartItems">{totalItems}</span>
+
+            {onHover && (
+              <BasketContainer
+                onMouseEnter={handleCartHover} // Keep it visible when hovered
+                onMouseLeave={handleCartLeave} // Hide when the hover leaves
+                style={{
+                  position: "absolute",
+                  top: "100%",
+                  left: "0",
+                  background: "white",
+                  border: "1px solid #ddd",
+                  padding: "10px",
+                  zIndex: 1000,
+                }}
+              ></BasketContainer>
+            )}
+          </span>
         </div>
       </nav>
       <nav className="nav__links">

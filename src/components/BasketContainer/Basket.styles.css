@@ -1,0 +1,41 @@
+.Basket__Container {
+  position: absolute;
+  background-color: white;
+  z-index: 100;
+  transform: translateX(-85%);
+  width: 45rem;
+  overflow: hidden;
+  padding: 1rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  box-shadow: 2px 2px 2px 2px #ccc;
+}
+
+.Basket__Container:hover {
+  display: block;
+}
+
+.small-product__listing {
+  height: 11rem;
+  border-top: none;
+}
+
+.totalCartItems {
+  background-color: #43d5b0;
+  height: 2.5rem;
+  width: 2.5rem;
+  position: absolute;
+  left: 45%;
+  top: 10%;
+  color: black;
+  font-size: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.Total-balance--container {
+  background-color: #e5e5e5;
+}

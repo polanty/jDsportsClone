@@ -1,5 +1,6 @@
 // import { Outlet, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { getAllProductsFromCloud } from "../../Utilities/cloudfile";
 import category from "../../assets/products/categories";
 import { Button } from "../../components/Button.componets";
 import "../../sections/Top-Picks/TopPicks.section.css";
@@ -9,6 +10,24 @@ const TopPicks = () => {
   const { products } = category;
   const [TopPicksCategory, setTopPicksCategory] = useState("men");
   const [active, setActive] = useState(null);
+  const [cloudproducts, setCloudProducts] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    // fetching products from the cloud \
+
+    const fetchProductsFromCloud = async () => {
+      try {
+        const pulledProducts = await getAllProductsFromCloud();
+
+        setCloudProducts(pulledProducts[0].products);
+      } catch (error) {
+        setError(error);
+      }
+    };
+
+    fetchProductsFromCloud();
+  }, []);
 
   useEffect(() => {
     setActive("men");
@@ -54,7 +73,7 @@ const TopPicks = () => {
         </Button>
       </div>
       <div className="product__container">
-        {products
+        {cloudproducts
           .filter((ele) => ele.category === TopPicksCategory)
           .filter((_, ind) => ind < 4)
           .map((product, ind) => (

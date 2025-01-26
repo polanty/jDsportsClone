@@ -1,0 +1,21 @@
+.Stripe__form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .__PrivateStripeElement {
+  display: flex;
+  flex-direction: column;
+} */
+
+.Stripe__form-header {
+  margin: 2rem 0;
+}
+
+.Stripe__form-payment {
+  /* background-color: red; */
+  min-height: 5rem;
+
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,27 @@
+.Empty-basket--container {
+  width: 114rem;
+  min-height: 50rem;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-symbol--container {
+  height: 20rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.CartDark {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.cart-symbol--header {
+  margin-bottom: 2rem;
+}

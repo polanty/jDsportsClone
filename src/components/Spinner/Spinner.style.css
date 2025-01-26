@@ -12,6 +12,7 @@
   align-items: center;
 } */
 
+.SpinnerContainer,
 .SpinnerContainer {
   display: inline-block;
   width: 100px;
@@ -20,13 +21,15 @@
   border-radius: 50%;
   border-top-color: #636767;
   animation: spin 1s infinite linear;
-  /* -webkit-animation: spin 1s ease-in-out infinite; */
+}
 
-  /* @-webkit-keyframes spin {
-    to {
-      -webkit-transform: rotate(360deg);
-    }
-  } */
+.SpinnerContainer__small {
+  width: 45px;
+  height: 45px;
+  border: 3px solid white;
+  display: inline-block;
+  border-radius: 50%;
+  animation: spin 1s infinite linear;
 }
 
 @keyframes spin {

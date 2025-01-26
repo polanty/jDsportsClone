@@ -4,9 +4,15 @@
   background-color: brown;
   display: block;
   position: absolute;
+  /* position: relative; */
   z-index: 3;
   top: 0;
   left: 0;
   color: white;
   transition: 0.6s;
+}
+
+.courasel-image {
+  height: 100%;
+  width: 100%;
 }

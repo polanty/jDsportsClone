@@ -1,0 +1,23 @@
+.Redirection__container {
+  /* background-color: red; */
+  max-width: 80%;
+  height: 50vh;
+  margin: 0 auto;
+  color: #1a1a1a;
+
+  padding: 5rem;
+}
+
+.Redirection__container > h1 {
+  font-size: 6rem;
+  margin-bottom: 2rem;
+}
+
+.Redirection__container > h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.Redirection__container > p {
+  font-size: 2rem;
+}

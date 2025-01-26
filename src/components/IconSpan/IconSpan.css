@@ -1,18 +1,29 @@
 .IconSpan-button {
   height: inherit;
-  width: 5rem;
+  width: 6.5rem;
+
+  max-width: 6.5rem;
   background-color: #f8f8f8; /*  #f8f8f8 */
   border: 1px solid #e5e5e5;
   color: #1a1a1a;
+  display: inline-block;
 
   background-repeat: no-repeat;
   background-size: 2rem 2rem;
   background-position: center;
   transition: all 0.5s;
+  cursor: pointer;
 }
 
 .IconSpan-button:hover {
   background-color: #e5e5e5;
+}
+
+.Basket__special--container {
+  display: block;
+  position: relative;
+  /* width: 100%; */
+  height: 100%;
 }
 
 .IconSpan-button-account {
@@ -25,4 +36,5 @@
 
 .IconSpan-button-favorite {
   background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIGlkPSJhIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MCA1MCI+PGRlZnM+PHN0eWxlPi5ie2ZpbGw6bm9uZTtzdHJva2U6IzhjOGM4YztzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2Utd2lkdGg6M3B4O308L3N0eWxlPjwvZGVmcz48cmVjdCBjbGFzcz0iYiIgeD0iNi4yNCIgeT0iMTUuNiIgd2lkdGg9IjM3LjUzIiBoZWlnaHQ9IjI3Ljg0IiByeD0iMS41IiByeT0iMS41Ii8+PHBhdGggY2xhc3M9ImIiIGQ9Ik0xNi44OCwxNS44NXMtMS05LjkzLDguMTItOS45Myw4LjEzLDkuOTMsOC4xMyw5LjkzIi8+PC9zdmc+);
+  position: relative;
 }
