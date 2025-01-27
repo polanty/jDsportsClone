@@ -1,5 +1,5 @@
 .Empty-basket--container {
-  width: 114rem;
+  max-width: 114rem;
   min-height: 50rem;
   margin: 0 auto;
 

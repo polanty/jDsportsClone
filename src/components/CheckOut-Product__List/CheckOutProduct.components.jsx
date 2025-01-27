@@ -4,7 +4,7 @@ import "./CheckOutProduct.styles.css";
 import { Button } from "../Button.componets";
 
 const CartProducts = ({
-  key,
+  index,
   product,
   smallClass = "",
   DescriptionsmallClass = "",
@@ -19,7 +19,7 @@ const CartProducts = ({
   } = useContext(ProductLiteralContext);
 
   return (
-    <div key={key} className={`checkout__products ${smallClass}`}>
+    <div key={index} className={`checkout__products ${smallClass}`}>
       <div className="checkout__products-imageContainer">
         <img
           src={product.image.full}

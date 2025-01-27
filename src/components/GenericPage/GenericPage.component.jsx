@@ -54,7 +54,7 @@ const GenericPage = ({ routeName }) => {
           </li>
           {productCategories.length ? (
             productCategories.map((cat, ind) => (
-              <RoundImageLinks category={cat} key={ind} />
+              <RoundImageLinks category={cat} route={routeName} key={ind} />
             ))
           ) : (
             <div>

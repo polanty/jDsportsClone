@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
 import "./RoundImageLinks.css";
 
-const RoundImageLinks = ({ category }) => {
+const RoundImageLinks = ({ category, route }) => {
+  console.log(route);
   return (
     <li>
       <NavLink to={category} className="generic-header-links-container">

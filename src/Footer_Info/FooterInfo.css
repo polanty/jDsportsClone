@@ -58,11 +58,13 @@
 
 .footer-link__copyright-second {
   align-items: center;
+  flex-basis: 70%;
 }
 
 .footer-text {
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  /* align-self: flex-start; */
 }
 
 .footer-image-container {

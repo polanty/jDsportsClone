@@ -47,7 +47,7 @@ const OverLay = () => {
                 <Product
                   product={product}
                   key={ind}
-                  classNAME={`product-view__small`}
+                  classNAME={`product-view__recentlyViewed`}
                   classNAME2="recentlViewedContainer-product-view"
                 />
               ))}

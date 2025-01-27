@@ -5,6 +5,7 @@ import { Routes, Route } from "react-router-dom";
 import "./styles.css";
 import { Navigation } from "./Navigation";
 import Home from "./Home";
+import ScrollToTop from "./Utilities/scrollToTop/ScrollToTop.utility";
 
 // import Shop from "./Shop";
 // import Checkout from "./Checkout";
@@ -19,18 +20,21 @@ import PageNotFound from "./PageNotFound";
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Navigation />}>
-        <Route index element={<Home />}></Route>
-        <Route path="men/*" element={<MenRoute />}></Route>
-        <Route path="women/*" element={<WomenRoute />}></Route>
-        <Route path="kids/*" element={<KidsRoute />}></Route>
-        <Route path="brands/*" element={<BrandRoute />}></Route>
-        <Route path="accessories/*" element={<AccessoryRoute />}></Route>
-        <Route path="productView" element={<ProductView />}></Route>
-        <Route path="Checkout" element={<Checkout />}></Route>
-        <Route path="*" element={<PageNotFound />}></Route>
-      </Route>
-    </Routes>
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<Navigation />}>
+          <Route index element={<Home />}></Route>
+          <Route path="men/*" element={<MenRoute />}></Route>
+          <Route path="women/*" element={<WomenRoute />}></Route>
+          <Route path="kids/*" element={<KidsRoute />}></Route>
+          <Route path="brands/*" element={<BrandRoute />}></Route>
+          <Route path="accessories/*" element={<AccessoryRoute />}></Route>
+          <Route path="productView" element={<ProductView />}></Route>
+          <Route path="Checkout" element={<Checkout />}></Route>
+          <Route path="*" element={<PageNotFound />}></Route>
+        </Route>
+      </Routes>
+    </>
   );
 }

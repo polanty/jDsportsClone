@@ -15,7 +15,7 @@ const BasketContainer = ({ isActive = "" }) => {
         {cartItemContainer.map((product, ind) => {
           return (
             <CartProducts
-              key={ind}
+              index={ind}
               product={product}
               smallClass={"small-product__listing"}
               smallClassButton={"smallClassButton"}

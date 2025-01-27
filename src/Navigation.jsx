@@ -71,15 +71,14 @@ export const Navigation = () => {
               name="text"
               onChange={onFormchangeHandler}
               onClick={cartToogleHandler}
-              Basket__special--container
             />
           </form>
           <IconSpan className={"IconSpan-button-account"} />
           <IconSpan className={"IconSpan-button-basket"} />
           <span
-            className="Basket__special--container"
             onMouseEnter={handleCartHover}
             onMouseLeave={handleCartLeave}
+            className="basket__special--container"
           >
             <IconSpan className={"IconSpan-button-favorite"} />
             {cartItemContainer.length ? (
