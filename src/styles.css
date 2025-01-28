@@ -221,6 +221,7 @@ body {
   transform: translate(50%, 50%);
 
   transform: translate(-50%, -50%) */
+  margin-top: 3rem;
   width: 100%;
   background-color: #2e2e2e;
   color: white;
@@ -228,6 +229,7 @@ body {
   min-height: 3rem;
   display: flex;
   align-items: center;
+  display: block;
 }
 
 .footer-socials-content {

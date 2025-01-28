@@ -16,7 +16,7 @@
   margin: 0 auto;
   display: block;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 
   padding: 3rem 0 7rem;
@@ -29,7 +29,7 @@
 .footer-link__header {
   font-size: 1.4rem;
   font-weight: 500;
-  padding: 0 15px 5px 0;
+  padding: 0 15px 25px 0;
 }
 
 .footer-link__links {
@@ -42,7 +42,7 @@
 .footer-link__copyright {
   display: block;
   max-width: 140rem;
-  margin: auto;
+  margin: 0 auto;
   width: 100%;
   padding: 1rem;
   display: flex;
@@ -58,7 +58,7 @@
 
 .footer-link__copyright-second {
   align-items: center;
-  flex-basis: 70%;
+  /* flex-basis: 50%; */
 }
 
 .footer-text {

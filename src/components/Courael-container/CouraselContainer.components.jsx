@@ -1,27 +1,28 @@
 import "./CouraselContainer.css";
 import Courasel from "../Courasel/Cousarel.components";
+// import TopBanner from "../../../src/assets/courasel/TopBanner.gif";
 import { Button } from "../Button.componets";
 import { useState } from "react";
 
-const CouraselContainer = () => {
+const CouraselContainer = ({ couraelElements = [], link }) => {
   const [activeInd, setActiveInd] = useState(0);
 
   // console.log(activeInd);
 
-  const couraelElements = [
-    {
-      title: "Courasel elements 1",
-      color: "orange",
-    },
-    {
-      title: "Courasel elements 2",
-      color: "silver",
-    },
-    {
-      title: "Courasel elements 3",
-      color: "green",
-    },
-  ];
+  // const couraelElements = [
+  //   {
+  //     title: "Courasel elements 1",
+  //     color: "orange",
+  //   },
+  //   {
+  //     title: "Courasel elements 2",
+  //     color: "silver",
+  //   },
+  //   {
+  //     title: "Courasel elements 3",
+  //     color: "green",
+  //   },
+  // ];
 
   const couraselLength = couraelElements.length - 1;
 
@@ -39,13 +40,15 @@ const CouraselContainer = () => {
   return (
     <div className="Courasel-container">
       <div className="courasel-inner">
-        {couraelElements.map((element, index) => {
+        {couraelElements.map((_, index) => {
           return (
             <Courasel
               key={index}
-              title={element.title}
+              TopBanner={couraelElements[index]}
+              link={link}
+              title={"Courasel Element"}
               style={{
-                backgroundColor: `${element.color}`,
+                backgroundColor: `${"red"}`,
                 transform: `translateX(${(index - activeInd) * 100}%)`,
               }}
             />
@@ -85,5 +88,11 @@ const CouraselContainer = () => {
     </div>
   );
 };
+
+// title={element.title}
+// style={{
+//   backgroundColor: `${element.color}`,
+//   transform: `translateX(${(index - activeInd) * 100}%)`,
+// }}
 
 export default CouraselContainer;

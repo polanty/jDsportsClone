@@ -1,6 +1,7 @@
 import "../GenericPage/GenericPage.css";
 import { NavLink } from "react-router-dom";
 import category from "../../assets/products/categories";
+import { AllProductImages } from "../../assets/AllImages/AllImagesObject/AllImagesObject";
 import CouraselContainer from "../Courael-container/CouraselContainer.components";
 import BigImageLink from "../../sections/BigImagesLink/BigImagesLink";
 import Blogs from "../../sections/Blogs/Blogs";
@@ -27,6 +28,12 @@ const GenericPage = ({ routeName }) => {
   }, [routeName]);
 
   const productCategories = uniqueProductForEachCategory(routeProduct);
+
+  const ImageRouteName = AllProductImages[routeName];
+
+  const { CouraselImagesLink } = ImageRouteName;
+
+  // console.log(CouraselImagesLink);
 
   return (
     <>
@@ -62,7 +69,10 @@ const GenericPage = ({ routeName }) => {
             </div>
           )}
         </ul>
-        <CouraselContainer />
+        <CouraselContainer
+          couraelElements={CouraselImagesLink}
+          link={routeName}
+        />
 
         <GenericShopByCategory
           routeName={routeName}
