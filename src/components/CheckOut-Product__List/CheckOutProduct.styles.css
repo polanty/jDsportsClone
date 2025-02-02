@@ -51,7 +51,7 @@
   padding: 1rem 0;
   display: flex;
   justify-content: space-around;
-  /* height: 12rem; */
+  height: max-content;
 }
 
 .checkout__products-imageContainer {
@@ -61,7 +61,7 @@
   align-items: center; /* Centers content vertically */
   height: 80%; /* Adjust to your desired height */
   width: 10rem;
-  overflow: hidden; /* Ensures no content overflows the container */
+  /* overflow: hidden;  Ensures no content overflows the container */
 }
 
 .checkout__products-image {

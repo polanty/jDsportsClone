@@ -1,4 +1,5 @@
 import "../GenericShopByCategory/GenericShopByCategory.style.css";
+import { AllProductImages } from "../../assets/AllImages/AllImagesObject/AllImagesObject";
 import { Link } from "react-router-dom";
 
 const GenericShopByCategory = ({ routeName, productCategories }) => {
@@ -10,6 +11,11 @@ const GenericShopByCategory = ({ routeName, productCategories }) => {
   };
 
   const accesoriesCategoryValues = ["men", "women", "kids"];
+
+  const currentRouteMail = AllProductImages[routeName];
+
+  const shopByCatImages = currentRouteMail.shopByCat;
+  // console.log(shopByCatImages);
 
   return (
     <>
@@ -28,7 +34,7 @@ const GenericShopByCategory = ({ routeName, productCategories }) => {
                 return (
                   <Link className="Generic-Categories" key={ind} to={category}>
                     <img
-                      src=""
+                      src={shopByCatImages[category]}
                       alt="Categoryimage"
                       className="Generic-Categories-image"
                     />
@@ -50,7 +56,7 @@ const GenericShopByCategory = ({ routeName, productCategories }) => {
                 return (
                   <Link className="Generic-Categories" key={ind} to={category}>
                     <img
-                      src=""
+                      src={shopByCatImages[category]}
                       alt="Categoryimage"
                       className="Generic-Categories-image"
                     />

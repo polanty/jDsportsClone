@@ -18,7 +18,7 @@
 .Overlay_inner {
   z-index: 499;
   background-color: white;
-  width: 90%;
+  width: 80%;
   /* top: 3%; */
   height: 35rem;
 
@@ -27,11 +27,18 @@
   transform: translate(-50%, -50%);
 
   /* inner styling for overlay contents */
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   gap: 3rem;
 
   /* position so to position the arrow button for the overlay inner */
+}
+
+@media screen and (min-width: 114rem) {
+  .Overlay_inner {
+    height: 33rem;
+    /* position so to position the arrow button for the overlay inner */
+  }
 }
 
 .Trending,
@@ -68,7 +75,7 @@
 
 .recently__viewed-item-container {
   display: flex;
-  height: 80%;
+  height: 90%;
   /* justify-content: space-between; */
 }
 
@@ -76,4 +83,11 @@
   height: 90%;
   width: 100%;
   object-fit: cover;
+}
+
+.Search_Results {
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 1.2rem;
+  margin-bottom: 2px;
 }

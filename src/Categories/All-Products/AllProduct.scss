@@ -5,6 +5,36 @@
   padding: 4rem 10rem;
 }
 
+.shopper-banner {
+  color: white;
+  background-color: black;
+  max-width: 113rem;
+  margin: 2rem auto;
+  padding: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shopper-banner h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.shopper-banner__logo {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.shopper-banner__logo-inner::after {
+  content: "JD";
+  background-color: white;
+  color: black;
+  padding: 1rem;
+  border-radius: 50%;
+}
+
 .productview-container {
   max-width: 140rem;
   display: grid;
@@ -20,9 +50,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 // .Individual-product {
 //   // background-color: red;
-//   height: 35rem;
+//  // height: 35rem;
 // }

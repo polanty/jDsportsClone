@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 // import TopBannerSample from "../../../src/assets/courasel/TopBanner.gif";
 import { Button } from "../Button.componets";
 
-const Courasel = ({ title, ind, TopBanner = "", link, ...others }) => {
+const Courasel = ({ title, ind, TopBanner = "", link = "men", ...others }) => {
   const navigate = useNavigate();
 
   const handleClickEvent = () => navigate(`${link}`);

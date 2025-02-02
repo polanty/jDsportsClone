@@ -1,6 +1,7 @@
 .brands__container {
-  max-width: 70%;
+  max-width: 80%;
   margin: 5rem auto;
+  min-height: max-content;
 }
 
 .product__header-container {

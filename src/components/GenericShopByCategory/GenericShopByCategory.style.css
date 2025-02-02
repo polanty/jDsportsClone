@@ -1,11 +1,13 @@
 .GenericShopByCategory-container {
   /* background-color: red; */
-  max-width: 114rem;
+  width: 80%;
   margin: 10rem auto;
   padding: 1rem;
 }
 
 .GenericCategoryTitleContainer {
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -18,21 +20,23 @@
 }
 
 .Generic-Category {
-  width: 100%;
+  max-width: 100%;
+
   display: flex;
   justify-content: space-between;
 }
 
 .Generic-Categories {
   display: block;
-  width: 32%;
+  width: 30%;
+  height: 100%;
   text-decoration: none;
 }
 
 .Generic-Categories-image {
   display: block;
-  /* width: 100%; */
-  height: 35rem;
+  width: 100%;
+  height: auto;
   background-color: red;
   transition: opacity 0.5s;
   margin-bottom: 1rem;

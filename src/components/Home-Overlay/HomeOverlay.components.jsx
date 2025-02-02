@@ -1,4 +1,6 @@
 import "../../components/Home-Overlay/HomeOverlay.css";
+import { uniqueStringValues } from "../../Utilities/helperFunctions";
+import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { UserContext } from "../../Contexts/Cart.context";
 import { ProductLiteralContext } from "../../Contexts/Products.context";
@@ -13,16 +15,26 @@ const OverLay = () => {
   const classOverlay = "Overlay";
   const classAnimation = "Overlayactive";
   const Overlay_inner = "Overlay_inner";
+  //Form navigation to Seachpage
+  const navigate = useNavigate();
 
-  const { cartToggle, setCartToggle, search } = useContext(UserContext);
+  const { cartToggle, setCartToggle, pastSearch } = useContext(UserContext);
   const { recentlViewedContainer } = useContext(ProductLiteralContext);
+
+  const pastSearchUnique = uniqueStringValues(pastSearch);
 
   //overlay toggle functionality
   const handleOverlay = () => {
     return setCartToggle(!cartToggle);
   };
 
-  //recent search funtionality
+  const onsubmitSearchhandler = (search) => {
+    //Inclune this in the previously searched
+    pastSearch.push(search);
+
+    // Navigate to "ResultPage" with form data
+    navigate("/SearchResultPage", { state: { search } });
+  };
 
   return (
     <>
@@ -31,12 +43,22 @@ const OverLay = () => {
         onClick={handleOverlay}
       ></div>
       <div className={`${Overlay_inner} ${cartToggle ? classAnimation : " "}`}>
-        <div className="Trending">
+        {/* <div className="Trending">
           <h3 className="Overlay__header">Trending</h3>
-        </div>
+        </div> */}
         <div className="recent__search">
           <h3 className="Overlay__header">Recent Searches</h3>
-          <p className="recent__search-text">{search}</p>
+          {pastSearchUnique
+            .filter((_, ind) => ind < 15)
+            .map((search, ind) => (
+              <p
+                className="Search_Results"
+                onClick={() => onsubmitSearchhandler(search)}
+                key={ind}
+              >
+                {search}
+              </p>
+            ))}
         </div>
         <div className="recently__viewed">
           <h3 className="Overlay__header">Recently Viewed</h3>

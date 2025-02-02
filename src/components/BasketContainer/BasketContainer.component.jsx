@@ -20,6 +20,7 @@ const BasketContainer = ({ isActive = "" }) => {
               smallClass={"small-product__listing"}
               smallClassButton={"smallClassButton"}
               DescriptionsmallClass={"DescriptionsmallClass"}
+              key={ind}
             />
           );
         })}

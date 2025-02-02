@@ -1,4 +1,4 @@
-import { Outlet, NavLink } from "react-router-dom";
+import { Outlet, NavLink, useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState, useRef } from "react";
 import category from "./assets/products/categories.js";
 import { ProductLiteralContext } from "./Contexts/Products.context.jsx";
@@ -21,6 +21,9 @@ export const Navigation = () => {
   const { cartToggle, setCartToggle, search, setSearch, pastSearch } =
     useContext(UserContext);
 
+  //Form navigation to Seachpage
+  const navigate = useNavigate();
+
   const { totalItems, cartItemContainer } = useContext(ProductLiteralContext);
   // products called from the category object
   const { products } = category;
@@ -34,6 +37,16 @@ export const Navigation = () => {
   const onFormchangeHandler = (e) => {
     const value = e.target.value;
     setSearch(value);
+  };
+
+  const onsubmitSearchhandler = (e) => {
+    e.preventDefault(); // Prevent page reload
+
+    //Inclune this in the previously searched
+    pastSearch.push(search);
+
+    // Navigate to "ResultPage" with form data
+    navigate("/SearchResultPage", { state: { search } });
   };
 
   const cartToogleHandler = () => {
@@ -56,12 +69,7 @@ export const Navigation = () => {
         </div>
 
         <div className="form_container">
-          <form
-            onSubmit={() => {
-              // console.log(FormValues);
-            }}
-            className="search-form"
-          >
+          <form className="search-form" onSubmit={onsubmitSearchhandler}>
             <FormInput
               containerClassType={"signUpLarge"}
               signupinput={"SignUp-input--search SignUp-input--search-active"}

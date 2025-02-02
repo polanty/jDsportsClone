@@ -16,6 +16,8 @@ import BrandRoute from "./Categories/Category-brands/CategoryBrands.routes";
 import AccessoryRoute from "./Categories/Category-accessories/CategoryAccessories.routes";
 import Checkout from "./Checkout";
 import ProductView from "./ProductView";
+import BlogsRoute from "./BlogsPage";
+import SearchResultPage from "./SearchResultPage";
 import PageNotFound from "./PageNotFound";
 
 export default function App() {
@@ -32,6 +34,8 @@ export default function App() {
           <Route path="accessories/*" element={<AccessoryRoute />}></Route>
           <Route path="productView" element={<ProductView />}></Route>
           <Route path="Checkout" element={<Checkout />}></Route>
+          <Route path="BlogsRoute" element={<BlogsRoute />}></Route>
+          <Route path="SearchResultPage" element={<SearchResultPage />}></Route>
           <Route path="*" element={<PageNotFound />}></Route>
         </Route>
       </Routes>

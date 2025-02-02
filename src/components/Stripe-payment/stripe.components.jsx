@@ -20,8 +20,6 @@ const StripeForm = () => {
 
   const amount = totalPrice * 100;
 
-  //function make sure the amount returned above will always be in two decimalplaces
-
   //  credit card payment details
   const handlePaymentSubmit = async (e) => {
     e.preventDefault();
@@ -32,24 +30,49 @@ const StripeForm = () => {
 
     setIsProcessingPayment(true);
 
-    // console.log(totalPrice, totalPrice * 100);
-    const response = await fetch("/.netlify/functions/create-payment-intent", {
-      method: "post",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ amount: amount }),
-    }).then((res) => res.json());
+    const cardPaymentDetails = elements.getElement(CardElement);
+
+    const cardElementValue = cardPaymentDetails._empty;
+
+    if (cardElementValue) {
+      setIsProcessingPayment(false);
+      alert("Please enter your card details.");
+      return;
+    }
+
+    let paymentIntentData;
+
+    try {
+      const response = await fetch(
+        "/.netlify/functions/create-payment-intent",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ amount: amount }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      const data = await response.json();
+
+      paymentIntentData = data;
+    } catch (error) {
+      console.error("Error creating payment intent:", error.message);
+      alert(error.message);
+    }
 
     const {
       paymentIntent: { client_secret },
-    } = response;
-
-    // console.log(response);
+    } = paymentIntentData;
 
     const paymentResult = await stripe.confirmCardPayment(client_secret, {
       payment_method: {
-        card: elements.getElement(CardElement),
+        card: cardPaymentDetails,
         billing_details: {
           name: "Guest",
         },
@@ -61,7 +84,8 @@ const StripeForm = () => {
     if (paymentResult.error) {
       setStripePaymentError(true);
 
-      alert(paymentResult.error);
+      alert(paymentResult.error.message);
+      return;
     } else {
       if (paymentResult.paymentIntent.status === "succeeded") {
         setStripePaymentSuccessfull(true);

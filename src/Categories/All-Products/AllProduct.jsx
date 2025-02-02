@@ -39,6 +39,7 @@ const AllProducts = () => {
         setIsloading(false);
         setCloudProducts(pulledProducts[0].products);
       } catch (error) {
+        setIsloading(false);
         setError(error);
       }
     };
@@ -83,6 +84,12 @@ const AllProducts = () => {
   return (
     <>
       <LocationMap locationPath={locationPath}></LocationMap>
+      <div className="shopper-banner">
+        <h1> {`Shop ${currentPath}`} </h1>
+        <span className="shopper-banner__logo">
+          ONLY AT <span className="shopper-banner__logo-inner"></span>
+        </span>
+      </div>
       <div
         className={
           isLoading || (currentRouteProduct && currentRouteProduct.length < 1)

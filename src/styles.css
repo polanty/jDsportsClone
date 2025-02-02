@@ -507,7 +507,7 @@ body {
 
 .Product-View__title {
   font-size: 3rem;
-  /* margin-left: -5rem; */
+  text-align: center;
   margin-bottom: 2rem;
 }
 
@@ -575,13 +575,13 @@ body {
 
 /* Blog-container page css layout */
 
-.Blog-container {
+/* .Blog-container {
   margin: 5rem auto;
-  /* background-color: blue; */
+  background-color: blue;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-}
+} */
 
 .Blogs-link {
   background-color: white;

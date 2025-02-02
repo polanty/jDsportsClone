@@ -26,6 +26,10 @@ export const uniqueProductForEachCategory = (products) => {
   return [...new Set(productCategories)];
 };
 
+export const uniqueStringValues = (products) => {
+  return [...new Set(products)];
+};
+
 //function to return the category for view in the Allproduct generic route
 
 export const productInThisCategory = (products, category) => {

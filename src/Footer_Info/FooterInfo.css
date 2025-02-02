@@ -1,15 +1,21 @@
 .footer-info-link-container {
   background-color: white;
-  /* max-width: 140rem;
-  margin: 0 auto; */
-  /* padding: 3rem 3rem 1rem; */
+  max-width: 80%;
+  margin: 0 auto;
   border: 0;
 }
 
-.footer-link-outer-container {
+/* .footer-info-link-container::before,
+.footer-info-link-container::after {
+  content: "";
   border-top: 1px solid #e5e5e5;
   border-bottom: 1px solid #e5e5e5;
-}
+} */
+
+/* .footer-link-outer-container {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+} */
 
 .footer-link__container {
   max-width: 140rem;

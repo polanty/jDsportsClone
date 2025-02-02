@@ -48,7 +48,7 @@ const CouraselContainer = ({ couraelElements = [], link }) => {
               link={link}
               title={"Courasel Element"}
               style={{
-                backgroundColor: `${"red"}`,
+                // backgroundColor: `${"red"}`,
                 transform: `translateX(${(index - activeInd) * 100}%)`,
               }}
             />
