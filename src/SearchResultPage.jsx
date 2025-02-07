@@ -65,6 +65,16 @@ const SearchResultPage = () => {
   return (
     <>
       <LocationMap locationPath={locationPath}></LocationMap>
+      {products?.length > 1 ? (
+        <div className="shopper-banner">
+          <h1> {`Shop ${safeSearch}`} </h1>
+          <span className="shopper-banner__logo">
+            ONLY AT <span className="shopper-banner__logo-inner"></span>
+          </span>
+        </div>
+      ) : (
+        ""
+      )}
       <div
         className={
           isLoading || (products && products.length < 1)

@@ -1,13 +1,13 @@
 // import { Outlet, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getAllProductsFromCloud } from "../../Utilities/cloudfile";
-import category from "../../assets/products/categories";
+// import category from "../../assets/products/categories";
 import { Button } from "../../components/Button.componets";
 import "../../sections/Top-Picks/TopPicks.section.css";
 import Product from "../../components/IndividualProduct/Product.components";
 
 const TopPicks = () => {
-  const { products } = category;
+  // const { products } = category;
   const [TopPicksCategory, setTopPicksCategory] = useState("men");
   const [active, setActive] = useState(null);
   const [cloudproducts, setCloudProducts] = useState([]);

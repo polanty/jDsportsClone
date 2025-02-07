@@ -6,6 +6,8 @@
   width: 100%;
   top: 100%;
   left: 0;
+  padding-bottom: 1rem;
+  /* min-height: max-content; */
   min-height: 40rem;
   background-color: white;
   color: #fff;
@@ -30,4 +32,87 @@
 .Dropdown_list_link {
   background-color: black;
   color: red;
+}
+
+.dropdownTextOuterContainer {
+  max-width: 80%;
+  height: 100%;
+  margin: 0 auto;
+  /* background-color: #ccc; */
+  padding: 2rem;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.dropdownTextInnerContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 25%;
+  background-color: white;
+}
+
+.dropdownTextHeader {
+  color: #1a1a1a;
+  margin-bottom: 2rem;
+}
+
+.dropdownTextHeader h2 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.dropdownImage-container {
+  width: 50%;
+  height: 60%;
+}
+
+.dropdownTextContainer1 {
+  /* background-color: blue; */
+}
+
+.dropdownTextContainer2 {
+  /* background-color: red; */
+}
+
+.dropdownText {
+  color: #1a1a1a;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.card-image--banner-test {
+  background-color: blue;
+}
+
+.brandMainContainer {
+  max-width: 80%;
+  margin: 0 auto;
+  padding-top: 3rem;
+}
+
+.brandLettersContainer {
+  width: 50%;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #ccc;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 1rem;
+  /* place-items: center; */
+}
+
+.dropdownBrandText {
+  /* background-color: red; */
+  font-size: 1.3rem;
+  color: grey;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+}
+
+.dropdownBrandText:hover {
+  background-color: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
 }

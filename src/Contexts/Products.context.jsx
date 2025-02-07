@@ -1,10 +1,13 @@
-import { useState, createContext } from "react";
+import { useState, createContext, useEffect } from "react";
+import { getAllProductsFromCloud } from "../Utilities/cloudfile";
 // import category from "../assets/products/categories";
 
 // one array holds all the objects that will be rendered to the cart items;
 
 export const ProductLiteralContext = createContext({
   cartItem: null,
+  cloudProduct: [],
+  setCloudProducts: () => null,
   setCartItem: () => null,
   cartItemContainer: null,
   setCartItemContainer: () => null,
@@ -19,11 +22,27 @@ export const ProductContextProvider = ({ children }) => {
   const [cartItemContainer, setCartItemContainer] = useState([]);
   const [recentlViewedContainer, setRecentlViewedContainer] = useState([]);
   const [cartItem, setCartItem] = useState(null);
-  const [cartCount, setCartCount] = useState(0);
+  // const [cartCount, setCartCount] = useState(0);
   const [stripePaymentSuccessfull, setStripePaymentSuccessfull] =
     useState(false);
   const [stripePaymentError, setStripePaymentError] = useState(false);
-  // const { products } = category;
+  const [cloudProduct, setCloudProducts] = useState([]);
+  const [error, setError] = useState([]);
+
+  useEffect(() => {
+    const fetchProductsFromCloud = async () => {
+      try {
+        const pulledProducts = await getAllProductsFromCloud();
+        setCloudProducts(pulledProducts[0].products);
+      } catch (error) {
+        setError(error);
+      }
+    };
+
+    fetchProductsFromCloud();
+  }, []);
+
+  // console.log(cloudProduct);
 
   // functionality to add items to the cart array
   const addToCart = (products = [], cartItemId) => {
@@ -107,6 +126,8 @@ export const ProductContextProvider = ({ children }) => {
   };
 
   const value = {
+    cloudProduct,
+    error,
     cartItemContainer,
     setCartItem,
     addToCart,
