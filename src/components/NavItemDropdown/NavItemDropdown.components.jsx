@@ -1,4 +1,5 @@
 import { useContext, useEffect, useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
 import { UserContext } from "../../Contexts/Cart.context";
 import { AllProductImages } from "../../assets/AllImages/AllImagesObject/AllImagesObject";
 import { ProductLiteralContext } from "../../Contexts/Products.context";
@@ -13,7 +14,9 @@ export const NavItemDropdown = ({
   dropDownOutHandler,
   ...others
 }) => {
-  const { isDropdownHovered, setIsDropDownHovered } = useContext(UserContext);
+  const navigate = useNavigate();
+  const { isDropdownHovered, setIsDropDownHovered, search, setSearch } =
+    useContext(UserContext);
   const { cloudProduct, loading, error } = useContext(ProductLiteralContext);
   const [brandsIncuded, setBrandIncluded] = useState([]);
   const [brandsLetter, setBrandLetter] = useState(null);
@@ -66,7 +69,24 @@ export const NavItemDropdown = ({
     setIsDropDownHovered(false);
   };
 
-  const onclickfilter = (e) => {
+  // Funstion to filter based on the current link clicked by the user
+  const filterbasedOnLinkClicked = (brand) => {
+    navigate("/SearchResultPage", { state: { from: text, filter: brand } });
+  };
+
+  //Onsubmit handler for search click
+  const onsubmitSearchhandler = (e) => {
+    e.preventDefault(); // Prevent page reload
+
+    let search = e.target.textContent;
+    //Set the search to the currently clicked brand
+    setSearch(search);
+
+    // Navigate to "ResultPage" with form data
+    navigate("/SearchResultPage", { state: { search } });
+  };
+
+  const onclickBrandPagefilter = (e) => {
     let letter = e.target.textContent.trim(); // Ensure no extra spaces
 
     setBrandLetter(letter);
@@ -102,7 +122,12 @@ export const NavItemDropdown = ({
                   <>
                     <div>
                       {" "}
-                      <p className="dropdownText">{brand}</p>
+                      <p
+                        onClick={() => filterbasedOnLinkClicked(brand)}
+                        className="dropdownText"
+                      >
+                        {brand}
+                      </p>
                     </div>
                   </>
                 ))}
@@ -115,7 +140,12 @@ export const NavItemDropdown = ({
                   <>
                     <div>
                       {" "}
-                      <p className="dropdownText">{types}</p>
+                      <Link
+                        to={`${text}/${types}`}
+                        className="dropdownTextLinks"
+                      >
+                        {types}
+                      </Link>
                     </div>
                   </>
                 ))}
@@ -142,7 +172,10 @@ export const NavItemDropdown = ({
             </div>
             <div className="brandLettersContainer">
               {brandAlpha.map((current) => (
-                <p onClick={onclickfilter} className="dropdownBrandText">
+                <p
+                  onClick={onclickBrandPagefilter}
+                  className="dropdownBrandText"
+                >
                   {current}
                 </p>
               ))}
@@ -150,11 +183,13 @@ export const NavItemDropdown = ({
             <div>
               {brandsIncuded.length > 0 &&
                 brandsIncuded.map((current) => (
-                  <p className="dropdownBrandText">{current}</p>
+                  <p onClick={onsubmitSearchhandler} className="dropdownText">
+                    {current}
+                  </p>
                 ))}
 
               {brandsLetter && brandsIncuded.length < 1 ? (
-                <p className="dropdownBrandText">{`No product Starting with ${brandsLetter}`}</p>
+                <p className="dropdownText">{`No product Starting with ${brandsLetter}`}</p>
               ) : (
                 ""
               )}

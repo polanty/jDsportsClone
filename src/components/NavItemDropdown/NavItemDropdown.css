@@ -75,10 +75,21 @@
   /* background-color: red; */
 }
 
-.dropdownText {
+.dropdownText,
+.dropdownTextLinks {
   color: #1a1a1a;
   font-size: 1.4rem;
   margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.dropdownTextLinks {
+  display: inline-block;
+  text-decoration: none;
+}
+.dropdownText:hover,
+.dropdownTextLinks:hover {
+  text-decoration: underline;
 }
 
 .card-image--banner-test {
@@ -98,6 +109,7 @@
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   gap: 1rem;
+  margin-bottom: 3rem;
   /* place-items: center; */
 }
 

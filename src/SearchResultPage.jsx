@@ -15,10 +15,14 @@ import { Button } from "./components/Button.componets";
 const SearchResultPage = () => {
   const location = useLocation();
   const { search } = location.state || {}; // Get data safely
+  const previousPath = location.state?.from || null;
+  const filterArg = location.state?.filter || null;
   const { pathname } = location;
   const [cloudproducts, setCloudProducts] = useState(null);
   const [error, setError] = useState(null);
   const [isLoading, setIsloading] = useState(true);
+
+  // console.log(filterArg);
 
   //The current location path
   const locationPath = pathname.split("/");
@@ -54,20 +58,42 @@ const SearchResultPage = () => {
 
   const safeSearch = String(search || "").toLowerCase();
 
-  const products = cloudproducts.filter((product) => {
-    return (
-      product.brand?.toLowerCase().includes(safeSearch) ||
-      product.name?.toLowerCase().includes(safeSearch) ||
-      product.type?.toLowerCase().includes(safeSearch)
-    );
-  });
+  let products;
+
+  // console.log(typeof previousPath);
+
+  if (previousPath) {
+    products = cloudproducts
+      .filter(
+        (product) =>
+          product.category?.toLowerCase() === previousPath?.toLowerCase()
+      )
+      .filter((product) => {
+        return product.brand?.toLowerCase() === filterArg?.toLowerCase();
+      });
+  } else {
+    products = cloudproducts.filter((product) => {
+      return (
+        product.brand?.toLowerCase().includes(safeSearch) ||
+        product.name?.toLowerCase().includes(safeSearch) ||
+        product.type?.toLowerCase().includes(safeSearch)
+      );
+    });
+  }
+
+  console.log(products);
 
   return (
     <>
       <LocationMap locationPath={locationPath}></LocationMap>
       {products?.length > 1 ? (
         <div className="shopper-banner">
-          <h1> {`Shop ${safeSearch}`} </h1>
+          <h1>
+            {" "}
+            {`Shop  ${
+              safeSearch ? safeSearch : `${previousPath} ${filterArg}`
+            }`}{" "}
+          </h1>
           <span className="shopper-banner__logo">
             ONLY AT <span className="shopper-banner__logo-inner"></span>
           </span>
