@@ -4,6 +4,12 @@
   min-height: max-content;
 }
 
+@media screen and (max-width: 900px) {
+  .brands__container {
+    max-width: 85%;
+  }
+}
+
 .product__header-container {
   width: 70%;
   margin-bottom: 2rem;
@@ -35,6 +41,22 @@
   background-color: white;
   color: #000000b3;
   transition: all 0.3s;
+}
+
+@media screen and (max-width: 900px) {
+  .TopPick__Btn {
+    height: 4.5rem;
+    padding: 0 2rem 0 2rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .TopPick__Btn {
+    height: 3.5rem;
+    padding: 0 1.5rem 0 1.5rem;
+    font-size: 1.1rem;
+  }
 }
 
 .TopPick__Btn.active {

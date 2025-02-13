@@ -6,6 +6,42 @@
   overflow: hidden;
 }
 
+@media screen and (max-width: 1200px) {
+  .Courasel-container {
+    min-height: 60vh;
+  }
+}
+
+@media screen and (max-width: 1024px) and (max-height: 506px) {
+  .Courasel-container {
+    height: 90vh;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .Courasel-container {
+    min-height: 50vh;
+  }
+}
+
+@media screen and (max-width: 900px) and (max-height: 500px) {
+  .Courasel-container {
+    min-height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .Courasel-container {
+    min-height: 45vh;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .Courasel-container {
+    min-height: 30vh;
+  }
+}
+
 .courasel-inner {
   display: block;
   width: 100%;

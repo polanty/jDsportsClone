@@ -15,7 +15,7 @@ export const NavItemDropdown = ({
   ...others
 }) => {
   const navigate = useNavigate();
-  const { isDropdownHovered, setIsDropDownHovered, search, setSearch } =
+  const { isDropdownHovered, setIsDropDownHovered, setCartToggle, setSearch } =
     useContext(UserContext);
   const { cloudProduct, loading, error } = useContext(ProductLiteralContext);
   const [brandsIncuded, setBrandIncluded] = useState([]);

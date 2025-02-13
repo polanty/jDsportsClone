@@ -1,3 +1,12 @@
+/* Mobile media queries  600, 900 and 1200 */
+/* 
+0-600PX: Phone
+600-900px: Tablet potrait
+900-1200px: Tablet landscape
+[1200 -1800] is where our normal styles apply
+1800px Big screen
+*/
+
 * {
   padding: 0;
   margin: 0;
@@ -12,6 +21,25 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; /*converting 10px to 1 rem instead of 16px from all browser default */
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 60%; /*converting 10px to 1 rem instead of 16px from all browser default */
+  }
+}
+
+@media screen and (max-width: 900px) {
+  html {
+    font-size: 55.5%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 45.5%;
+    overflow-y: scroll;
+  }
 }
 
 #root {
@@ -49,6 +77,18 @@ body {
   position: relative;
 }
 
+@media only screen and (max-width: 400px) {
+  body {
+    overflow-x: hidden;
+  }
+}
+/* @media screen and (max-width: 600px) {
+  body {
+    width: 100vw;
+    clear: both;
+  }
+} */
+
 .products {
   max-width: 114rem;
   margin: 0 auto;
@@ -58,6 +98,25 @@ body {
   grid-gap: 1rem;
 
   padding: 2rem;
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 900px) {
+}
+
+@media screen and (max-width: 600px) {
+  .products {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: max-content;
+    grid-gap: 1rem;
+
+    padding: 1rem;
+  }
 }
 
 .product_class {
@@ -92,6 +151,12 @@ body {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 1200px) {
+  .nav-container {
+    padding: 2rem;
+  }
+}
+
 .form_container {
   display: flex;
   align-items: center;
@@ -103,6 +168,25 @@ body {
   /* background-color: red; */
   position: relative;
   /* background-color: red; */
+}
+
+@media screen and (max-width: 1200px) {
+  .form_container {
+    height: 5rem;
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .form_container {
+    flex-basis: 70%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .form_container {
+    height: 4rem;
+  }
 }
 
 .nav-item:link,
@@ -120,6 +204,13 @@ body {
 
   transition: all 0.2s ease-out;
   transition-delay: 0.4s;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav-item:link,
+  .nav-item:visited {
+    font-size: 1.2rem;
+  }
 }
 
 .basket {
@@ -170,6 +261,20 @@ body {
   text-align: left;
 }
 
+@media screen and (max-width: 1200px) {
+  .LogoList-title {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .LogoList-title {
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+}
+
 /* .card-title {
    position: absolute;
    z-index: 2;
@@ -201,6 +306,17 @@ body {
   background-color: white;
   color: #000000b3;
   transition: all 0.3s;
+}
+
+@media screen and (max-width: 900px) {
+  .btn-primary {
+    width: 15rem;
+    height: 5rem;
+    line-height: 4rem;
+    padding: 0 2.5rem 0 2.5rem;
+
+    font-size: 1.5rem;
+  }
 }
 
 .btn-primary:hover {
@@ -245,6 +361,12 @@ body {
   position: relative;
 }
 
+@media screen and (max-width: 1200px) {
+  .SignUp-container {
+    padding-top: 6rem;
+  }
+}
+
 .SignUp-Campaign {
   width: 60%;
   margin: 0 auto;
@@ -265,6 +387,20 @@ body {
   text-align: center;
 }
 
+@media screen and (max-width: 1200px) {
+  .SignUp-Campaign > h3 {
+    font-size: 2.8rem;
+
+    line-height: 1;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .SignUp-Campaign > h3 {
+    font-size: 1.5rem;
+  }
+}
+
 .SignUp-Campaign > p {
   margin: 4rem;
   font-size: 1.8rem;
@@ -274,12 +410,38 @@ body {
   text-align: center;
 }
 
+@media screen and (max-width: 1200px) {
+  .SignUp-Campaign > p {
+    margin: 3.5rem;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .SignUp-Campaign > p {
+    font-size: 1.2rem;
+    margin: 3rem 0.5rem;
+  }
+}
+
 .SignUp-Components {
   display: flex;
   align-items: center;
   min-width: 80%;
   justify-content: center;
-  height: 5.5rem;
+  height: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .SignUp-Components {
+    min-width: 90%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .SignUp-Components {
+    min-width: 100%;
+  }
 }
 
 .SignUp-Components-small {
@@ -288,6 +450,18 @@ body {
   height: 5rem;
   bottom: 3rem;
 }
+
+@media screen and (max-width: 1200px) {
+  .SignUp-Components-small {
+    height: 4.5rem;
+  }
+}
+
+/* @media screen and (max-width: 900px) {
+  .SignUp-Components-small {
+    height: 3rem;
+  }
+} */
 
 .SignUp-input,
 .SignUp-input--search {
@@ -303,8 +477,21 @@ body {
   position: relative;
 }
 
+@media screen and (max-width: 1200px) {
+  .SignUp-input,
+  .SignUp-input--search {
+    padding: 0.7rem 1rem;
+  }
+}
+
 .SignUp-input::placeholder {
   font-family: Gotham SSm A, Gotham SSm B, Arial, sans-serif;
+}
+
+@media screen and (max-width: 1200px) {
+  .SignUp-input::placeholder {
+    font-size: 0.8rem;
+  }
 }
 
 .SignUp-input {
@@ -331,6 +518,13 @@ body {
   position: relative;
 }
 
+@media screen and (max-width: 1200px) {
+  .search-form,
+  .search-form:focus {
+    height: 100%;
+  }
+}
+
 .SignUp-input-button {
   width: 6rem;
   height: 100%;
@@ -340,11 +534,24 @@ body {
   position: relative;
 }
 
+@media screen and (max-width: 900px) {
+  .SignUp-input-button {
+    width: 5rem;
+  }
+}
+
 .SignUp-input-button-arrow,
 .SignUp-input-button-search {
   background-repeat: no-repeat;
   background-size: 2rem 2rem;
   background-position: center;
+}
+
+@media screen and (max-width: 700px) {
+  .SignUp-input-button-arrow,
+  .SignUp-input-button-search {
+    background-size: 1.5rem 1.5rem;
+  }
 }
 
 .SignUp-input-button-arrow {
@@ -379,6 +586,24 @@ body {
   transform: translate(-15%, -5%);
 }
 
+@media screen and (max-width: 1200px) {
+  .SignUp-input-button-Go::after {
+    width: 3.5rem;
+    height: 3.5rem;
+    top: -95%;
+
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .SignUp-input-button-Go::after {
+    width: 3rem;
+    height: 3rem;
+    top: -70%;
+    font-size: 0.8rem;
+  }
+}
 .SignUp-input:focus {
   outline: none;
 }
@@ -386,6 +611,19 @@ body {
 .SignUp-input::placeholder {
   color: #1a1a1a;
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .SignUp-input::placeholder {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .SignUp-input::placeholder {
+    color: #1a1a1a;
+    font-size: 0.8rem;
+  }
 }
 
 /* nav links styling */
@@ -449,12 +687,42 @@ body {
   align-items: center;
 }
 
+@media screen and (max-width: 1200px) {
+  .navLinks__container {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navLinks__container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
 /* Nav logo container */
 
 .logo_container {
   max-width: 30rem;
 }
 
+@media screen and (max-width: 1200px) {
+  .logo_container {
+    max-width: 20rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .logo_container {
+    max-width: 15rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logo_container {
+    max-width: 12rem;
+  }
+}
 /* product view page each product */
 .Product__view-page,
 .checkOut__container {
@@ -557,6 +825,12 @@ body {
   display: block;
   margin-bottom: 5rem;
   color: white;
+}
+
+@media screen and (max-width: 1200px) {
+  .BigImageLinkContainer_advert {
+    height: 15rem;
+  }
 }
 
 .BigImagesLinkContainer_links {

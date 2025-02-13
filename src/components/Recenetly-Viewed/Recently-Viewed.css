@@ -6,11 +6,11 @@
   /* background-color: red; */
 }
 
-@media (max-width: 114rem) {
+/* @media (max-width: 114rem) {
   .ProductView__recentlyViewed {
     height: 65vh;
   }
-}
+} */
 
 .ProductView__recentlyViewed-innerContainer {
   max-width: 70%;

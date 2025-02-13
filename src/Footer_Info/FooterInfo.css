@@ -5,17 +5,11 @@
   border: 0;
 }
 
-/* .footer-info-link-container::before,
-.footer-info-link-container::after {
-  content: "";
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
-} */
-
-/* .footer-link-outer-container {
-  border-top: 1px solid #e5e5e5;
-  border-bottom: 1px solid #e5e5e5;
-} */
+@media screen and (max-width: 1200px) {
+  .footer-info-link-container {
+    max-width: 90%;
+  }
+}
 
 .footer-link__container {
   max-width: 140rem;
@@ -38,11 +32,42 @@
   padding: 0 15px 25px 0;
 }
 
+@media screen and (max-width: 1200px) {
+  .footer-link__header {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 0 10px 15px 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer-link__header {
+    font-size: 1rem;
+    padding: 0 8px 12px 0;
+  }
+}
+
 .footer-link__links {
   display: block;
   font-size: 1.1rem;
   line-height: 2.1rem;
   padding: 0 15px 0 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .footer-link__links {
+    font-size: 1rem;
+    line-height: 1.8rem;
+    padding: 0 10px 0 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer-link__links {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 .footer-link__copyright {
@@ -53,6 +78,14 @@
   padding: 1rem;
   display: flex;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 1200px) {
+  .footer-link__copyright {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .footer-link__copyright-first,
@@ -73,7 +106,15 @@
   /* align-self: flex-start; */
 }
 
+@media screen and (max-width: 1200px) {
+  .footer-text {
+    font-size: 1rem;
+  }
+}
+
 .footer-image-container {
+  display: block;
+  max-width: 100%;
   height: 4rem;
   width: 100%;
   display: flex;
@@ -81,6 +122,30 @@
   align-items: baseline;
 }
 
+@media screen and (max-width: 1200px) {
+  .footer-image-container {
+    height: 3rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer-image-container {
+    height: 1.5rem;
+  }
+}
+
 .footer__payment-logo {
   height: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .footer__payment-logo {
+    height: 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer__payment-logo {
+    height: 10px;
+  }
 }

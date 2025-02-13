@@ -30,7 +30,7 @@ const SearchResultPage = () => {
   const navigate = useNavigate();
 
   //recently viewed container context
-  const { cartToggle, setCartToggle } = useContext(UserContext);
+  const { setCartToggle } = useContext(UserContext);
   const { recentlViewedContainer } = useContext(ProductLiteralContext);
 
   useEffect(() => {
