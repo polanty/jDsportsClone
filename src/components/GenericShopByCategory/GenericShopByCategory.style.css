@@ -93,4 +93,8 @@
   .Generic-Categories-text {
     font-size: 1.3rem;
   }
+
+  .GenericCategoryTitleContainer-link {
+    font-size: 1.5rem;
+  }
 }

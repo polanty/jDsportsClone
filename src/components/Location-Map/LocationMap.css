@@ -22,3 +22,12 @@
   text-decoration: none;
   text-transform: capitalize;
 }
+@media screen and (max-width: 900px) {
+  .AllProduct__location-details {
+    padding: 1rem;
+  }
+
+  .AllProduct__location-innerLink {
+    font-size: 1rem;
+  }
+}

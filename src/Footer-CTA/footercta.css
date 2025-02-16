@@ -9,7 +9,20 @@
   margin: 0 auto;
 }
 
-/* .cta-flex-container {
-  max-width: 140rem;
-  margin: 0 auto;
-} */
+@media screen and (max-width: 1200px) {
+  .cta-container {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .cta-container {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cta-container {
+    padding: 1.5rem 1rem;
+  }
+}

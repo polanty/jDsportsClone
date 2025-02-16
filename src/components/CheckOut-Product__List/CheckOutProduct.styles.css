@@ -4,12 +4,40 @@
   font-family: inherit;
   background-color: white;
   max-width: 100rem;
+  margin: 0 auto;
   padding-right: 0;
 
   display: grid;
   grid-template-columns: 3fr 2fr;
   gap: 2rem;
 }
+
+@media screen and (max-width: 1200px) {
+  .checkOut__container {
+    max-width: 80%;
+    grid-template-columns: 2.5fr 1.5fr;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .checkOut__container {
+    max-width: 90%;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* @media screen and (max-width: 900px) {
+  .checkOut__container {
+    font-family: inherit;
+    background-color: white;
+    max-width: 100rem;
+    padding-right: 0;
+  
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 2rem;
+  }
+} */
 
 .checkout__header__container {
   height: 5rem;
@@ -54,6 +82,26 @@
   height: max-content;
 }
 
+@media screen and (max-width: 1200px) {
+  .checkout__products {
+    height: 15rem;
+  }
+
+  .DescriptionsmallClass > h2 {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  /* .checkout__products {
+    height: rem;
+  } */
+
+  .DescriptionsmallClass > h2 {
+    font-size: 1rem;
+  }
+}
+
 .checkout__products-imageContainer {
   display: flex; /* Ensures proper alignment if needed */
   flex-direction: column;
@@ -72,6 +120,13 @@
   display: block; /* Removes inline spacing below images */
 }
 
+/* @media screen and (max-width: 1200px) {
+  .checkout__products-image {
+    max-height: 80%; 
+  
+  }
+} */
+
 .CheckOut__remove-products {
   display: block;
   outline: none;
@@ -80,6 +135,18 @@
   color: #000;
   padding: 1rem 0.5rem;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .CheckOut__remove-products {
+    padding: 0.7rem 0.3rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .CheckOut__remove-products {
+    padding: 0.5rem 0.2rem;
+  }
 }
 
 .CheckOut__remove-products:hover {
@@ -98,6 +165,24 @@
   color: #90929a;
 
   transition: all 0.2s ease;
+}
+
+@media screen and (max-width: 1200px) {
+  .CheckOut__Adding-products,
+  .CheckOut__Subtracting-products {
+    padding: 1rem;
+
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .CheckOut__Adding-products,
+  .CheckOut__Subtracting-products {
+    padding: 0.8rem;
+
+    font-size: 1.2rem;
+  }
 }
 
 .smallClassButton {

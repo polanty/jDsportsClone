@@ -10,13 +10,6 @@
   /* background-color: orangered; */
 }
 
-@media screen and (max-width: 1200px) {
-  .generic-header-links-container {
-    height: 9rem;
-    width: 7rem;
-  }
-}
-
 .generic-image-holder {
   /* background-color: blue; */
   height: 7rem;
@@ -42,4 +35,15 @@
   font-size: 1.5rem;
   font-weight: 400;
   text-decoration: none;
+}
+
+@media screen and (max-width: 1200px) {
+  .generic-header-links-container {
+    height: 9rem;
+    width: 7rem;
+  }
+
+  .generic-header-text {
+    font-size: 1.2rem;
+  }
 }

@@ -155,6 +155,22 @@ body {
   .nav-container {
     padding: 2rem;
   }
+
+  .small-header {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .small-header {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .small-header {
+    font-size: 0.8rem;
+  }
 }
 
 .form_container {
@@ -180,12 +196,19 @@ body {
 @media screen and (max-width: 700px) {
   .form_container {
     flex-basis: 70%;
+    height: 4rem;
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   .form_container {
-    height: 4rem;
+    height: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .form_container {
+    height: 3rem;
   }
 }
 
@@ -210,6 +233,20 @@ body {
   .nav-item:link,
   .nav-item:visited {
     font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .nav-item:link,
+  .nav-item:visited {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .nav-item:link,
+  .nav-item:visited {
+    font-size: 0.8rem;
   }
 }
 
@@ -264,6 +301,15 @@ body {
 @media screen and (max-width: 1200px) {
   .LogoList-title {
     font-size: 25px;
+    margin-bottom: 20px;
+  }
+
+  .card-image-small {
+    max-width: 18rem;
+  }
+
+  .card-image-smaller {
+    max-width: 28rem;
   }
 }
 
@@ -272,6 +318,45 @@ body {
     font-size: 18px;
     line-height: 1;
     letter-spacing: 0;
+    margin-bottom: 18px;
+  }
+
+  .card-image-small {
+    max-width: 16rem;
+  }
+
+  .card-image-smaller {
+    max-width: 26rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .LogoList-title {
+    font-size: 15px;
+    margin-bottom: 15px;
+  }
+
+  .card-image-small {
+    max-width: 14rem;
+  }
+
+  .card-image-smaller {
+    max-width: 24rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .LogoList-title {
+    font-size: 10px;
+    margin-bottom: 12px;
+  }
+
+  .card-image-small {
+    max-width: 12rem;
+  }
+
+  .card-image-smaller {
+    max-width: 22rem;
   }
 }
 
@@ -319,6 +404,26 @@ body {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .btn-primary {
+    width: 12rem;
+    height: 4rem;
+    line-height: 4rem;
+    padding: 0 2.2rem 0 2.2rem;
+
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .btn-primary {
+    width: 10rem;
+    height: 3.5rem;
+    line-height: 3rem;
+
+    font-size: 1rem;
+  }
+}
 .btn-primary:hover {
   background-color: black;
   color: white;
@@ -367,6 +472,12 @@ body {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .footer-socials-content {
+    padding: 0;
+  }
+}
+
 .SignUp-Campaign {
   width: 60%;
   margin: 0 auto;
@@ -401,6 +512,18 @@ body {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .SignUp-Campaign > h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .SignUp-Campaign > h3 {
+    font-size: 1rem;
+  }
+}
+
 .SignUp-Campaign > p {
   margin: 4rem;
   font-size: 1.8rem;
@@ -421,6 +544,18 @@ body {
   .SignUp-Campaign > p {
     font-size: 1.2rem;
     margin: 3rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .SignUp-Campaign > p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .SignUp-Campaign > p {
+    font-size: 0.8rem;
   }
 }
 
@@ -457,6 +592,18 @@ body {
   }
 }
 
+@media screen and (max-width: 900px) {
+  .SignUp-Components-small {
+    height: 3.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .SignUp-Components-small {
+    height: 2.5rem;
+  }
+}
+
 /* @media screen and (max-width: 900px) {
   .SignUp-Components-small {
     height: 3rem;
@@ -477,6 +624,10 @@ body {
   position: relative;
 }
 
+.SignUp-input {
+  padding: 1.8rem 1rem;
+}
+
 @media screen and (max-width: 1200px) {
   .SignUp-input,
   .SignUp-input--search {
@@ -494,12 +645,14 @@ body {
   }
 }
 
-.SignUp-input {
-  padding: 1.8rem 1rem;
+@media screen and (max-width: 900px) {
+  .SignUp-input::placeholder {
+    font-size: 3px;
+  }
 }
 
 .SignUp-input--search {
-  border: 1px solid #e5e5e5;
+  /* border: 1px solid #e5e5e5; */
   border-right: transparent;
   height: inherit;
   position: absolute;
@@ -513,6 +666,7 @@ body {
 .search-form:focus {
   /* width: 40rem; */
   /* border: 1px solid #e5e5e5; */
+  height: 100%;
   width: 100%;
   outline: none;
   position: relative;
@@ -602,6 +756,15 @@ body {
     height: 3rem;
     top: -70%;
     font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .SignUp-input-button-Go::after {
+    width: 2rem;
+    height: 2rem;
+    top: -35%;
+    font-size: 0.6rem;
   }
 }
 .SignUp-input:focus {
@@ -723,6 +886,12 @@ body {
     max-width: 12rem;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .logo_container {
+    max-width: 8rem;
+  }
+}
 /* product view page each product */
 .Product__view-page,
 .checkOut__container {
@@ -779,9 +948,41 @@ body {
   margin-bottom: 2rem;
 }
 
+@media screen and (max-width: 1200px) {
+  .Product-View__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .Product-View__title {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Product-View__title {
+    font-size: 1.2rem;
+  }
+}
+
 .Product-View__price {
   font-size: 2.5rem;
   margin-bottom: 4rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .Product-View__price {
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .Product-View__price {
+    font-size: 1.8rem;
+  }
 }
 
 .btn-primary__addToCart {
@@ -797,6 +998,20 @@ body {
   cursor: pointer;
 
   transition: all 0.3s ease-in;
+}
+
+@media screen and (max-width: 1200px) {
+  .btn-primary__addToCart {
+    width: 70%;
+    padding: 1.1rem 1.2rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .btn-primary__addToCart {
+    padding: 1rem 1.1rem;
+    font-size: 1.2rem;
+  }
 }
 
 .btn-primary__addToCart:hover {
@@ -830,6 +1045,18 @@ body {
 @media screen and (max-width: 1200px) {
   .BigImageLinkContainer_advert {
     height: 15rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .BigImageLinkContainer_advert {
+    height: 12rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .BigImageLinkContainer_advert {
+    height: 10rem;
   }
 }
 
@@ -879,7 +1106,7 @@ body {
 
 .Individual-product {
   width: 100%;
-  height: 50rem;
+  max-height: 50rem;
   /* background-color: red; */
   cursor: pointer;
   position: relative;
@@ -978,4 +1205,56 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .qualified__delivery {
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+
+  .standard_delivery h1 {
+    font-size: 1rem;
+  }
+
+  .standard_delivery--details p {
+    font-size: 1.2rem;
+  }
+
+  .total--price__container {
+    font-size: 1.2rem;
+    padding: 0.8rem;
+  }
+
+  .qualified__delivery {
+    font-size: 1.2rem;
+  }
+
+  .standard_delivery h1 {
+    font-size: 1.2rem;
+  }
+
+  .standard_delivery--heading {
+    display: block;
+    padding: 1.2rem;
+  }
+
+  .standard_delivery--details {
+    padding: 1.5rem;
+  }
+
+  .total--price__container {
+    font-size: 1.3rem;
+  }
+
+  .btn-checkout {
+    height: 4rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .btn-primary__addToCart {
+    padding: 1rem 1.1rem;
+    font-size: 1.2rem;
+  }
 }

@@ -10,7 +10,7 @@
 .Footer_Card_Last {
   display: inline-block;
   background: linear-gradient(#2e2e2e, #2e2e2e);
-  width: 33.3%;
+  max-width: 33.3%;
   /* max-height: 44rem; */
   /* for the button element  and last image*/
   position: relative;
@@ -45,6 +45,14 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .Footer_Card_card > p {
+    font-size: 0.5rem;
+    padding-bottom: 1rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
 .Footer_Card_card > h3 {
   font-size: 1.5rem;
   font-weight: 700;
@@ -66,6 +74,12 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .Footer_Card_card > h3 {
+    font-size: 0.8rem;
+  }
+}
+
 .Footer_Card_card:not(:last-child) {
   margin-right: 1.5rem;
   padding: 3rem 2rem 8rem;
@@ -76,6 +90,24 @@
     padding: 1rem 1rem 8rem;
   }
 }
+
+@media screen and (max-width: 900px) {
+  .Footer_Card_card:not(:last-child) {
+    padding-bottom: 6rem;
+  }
+}
+
+/* @media screen and (max-width: 600px) {
+  .Footer_Card_card:not(:last-child) {
+    padding-bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Footer_Card_card:not(:last-child) {
+    padding-bottom: 2rem;
+  }
+} */
 
 .footer-btn-primary {
   background-color: inherit;
@@ -111,8 +143,25 @@
 
 @media screen and (max-width: 900px) {
   .footer-btn-primary {
+    height: 3.5rem;
     font-size: 1rem;
     padding: 0.5rem 1rem;
+  }
+
+  .Footer_Card_card:not(:last-child) {
+    margin-right: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-btn-primary {
+    height: 2.5rem;
+    font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .Footer_Card_card:not(:last-child) {
+    margin-right: 1rem;
   }
 }
 
