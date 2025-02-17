@@ -4,6 +4,37 @@ import { ProductLiteralContext } from "../../Contexts/Products.context";
 import { Button } from "../Button.componets";
 import "./stripe.styles.css";
 
+// Inline styling for stripe payment
+const getCardElementOptions = () => {
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    // Mobile styles
+    return {
+      style: {
+        base: {
+          fontSize: "10px",
+          color: "#333",
+          "::placeholder": {
+            color: "#999",
+          },
+        },
+      },
+    };
+  } else {
+    // Desktop styles
+    return {
+      style: {
+        base: {
+          fontSize: "14px",
+          color: "#000",
+          "::placeholder": {
+            color: "#666",
+          },
+        },
+      },
+    };
+  }
+};
+
 const StripeForm = () => {
   const stripe = useStripe();
   const elements = useElements();
@@ -99,7 +130,10 @@ const StripeForm = () => {
       <form onSubmit={handlePaymentSubmit}>
         <div className="Stripe__form">
           <h2 className="Stripe__form-header">Credit card payment: </h2>
-          <CardElement className="Stripe__form-payment" />
+          <CardElement
+            options={getCardElementOptions()}
+            className="Stripe__form-payment"
+          />
 
           <Button
             btnclass={"btn-primary btn-checkout"}

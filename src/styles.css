@@ -565,6 +565,7 @@ body {
   min-width: 80%;
   justify-content: center;
   height: 100%;
+  position: relative;
 }
 
 @media screen and (max-width: 1200px) {
@@ -710,6 +711,11 @@ body {
 
 .SignUp-input-button-arrow {
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNi43MjkgNy43MjgiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO3N0cm9rZTojMDAwfTwvc3R5bGU+PC9kZWZzPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgLjM2NCkiPjxwYXRoIGQ9Ik0wIDBMMTUuOTYxIDAiIGNsYXNzPSJjbHMtMSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAzLjQ3KSIvPjxwYXRoIGQ9Ik00NjQ3LjkgMTQyNS41bDMuNzE0IDMuNS0zLjcxNCAzLjUiIGNsYXNzPSJjbHMtMSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQ2MzUuNjEyIC0xNDI1LjUpIi8+PC9nPjwvc3ZnPg==);
+  background-color: transparent;
+  display: block;
+  z-index: 500;
+  position: absolute;
+  right: 0rem;
 }
 
 .SignUp-input-button-search {
@@ -907,11 +913,13 @@ body {
   justify-content: space-between;
 }
 
-/* @media screen and (max-width: 140rem) {
-  body {
-    background-color: olive;
+@media screen and (max-width: 500px) {
+  /* product view page each product */
+  .Product__view-page,
+  .checkOut__container {
+    padding: 3rem;
   }
-} */
+}
 
 /* Product View section */
 .ProductView-Image__Container {
@@ -1253,8 +1261,79 @@ body {
 }
 
 @media screen and (max-width: 900px) {
-  .btn-primary__addToCart {
-    padding: 1rem 1.1rem;
-    font-size: 1.2rem;
+  /* This is from stripe */
+
+  .qualified__delivery {
+    font-size: 0.8rem;
+    padding: 1.2rem;
   }
+
+  .standard_delivery h1 {
+    font-size: 0.8rem;
+  }
+
+  .standard_delivery--details p {
+    font-size: 1rem;
+  }
+
+  .total--price__container {
+    font-size: 1rem;
+  }
+
+  .standard_delivery h1 {
+    font-size: 1rem;
+  }
+
+  .standard_delivery--heading {
+    padding: 1rem;
+  }
+
+  .standard_delivery--details {
+    padding: 1.2rem;
+  }
+
+  .total--price__container {
+    font-size: 1.1rem;
+  }
+
+  .btn-checkout {
+    margin: 1rem 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  /* This is from stripe */
+
+  .qualified__delivery {
+    font-size: 0.6rem;
+    padding: 1rem;
+  }
+
+  .standard_delivery h1 {
+    font-size: 0.6rem;
+  }
+
+  .standard_delivery--details p {
+    font-size: 0.8rem;
+  }
+
+  .total--price__container {
+    font-size: 0.8rem;
+  }
+
+  .standard_delivery h1 {
+    font-size: 0.8rem;
+  }
+
+  .total--price__container {
+    font-size: 1rem;
+  }
+
+  .btn-checkout {
+    margin: 0.8rem 0;
+  }
+}
+
+.ElementsApp input {
+  background-color: red;
 }
