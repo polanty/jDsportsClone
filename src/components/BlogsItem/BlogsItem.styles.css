@@ -1,0 +1,77 @@
+/* Blog container */
+.blog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* max-width: 800px; */
+  margin: auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+/* .blog-image {
+  min-height: 60%;
+} */
+
+/* Blog image styling */
+.blog-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Blog content */
+.blog-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.blog-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.blog-content p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .blog-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .blog-content {
+    padding: 15px;
+  }
+
+  .blog-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 375px) {
+  /* iPhone SE */
+  .blog-container {
+    padding: 12px;
+  }
+
+  .blog-content {
+    padding: 10px;
+  }
+
+  .blog-content h2 {
+    font-size: 1rem;
+  }
+
+  .blog-content p {
+    font-size: 0.85rem;
+  }
+}

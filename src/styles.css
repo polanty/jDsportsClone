@@ -632,7 +632,7 @@ body {
 @media screen and (max-width: 1200px) {
   .SignUp-input,
   .SignUp-input--search {
-    padding: 0.7rem 1rem;
+    padding: 1rem;
   }
 }
 
@@ -1334,6 +1334,30 @@ body {
   }
 }
 
+@media screen and (max-width: 400px) {
+  /* This is from stripe */
+
+  .Individual-product {
+    max-height: 25rem;
+  }
+}
+
 .ElementsApp input {
   background-color: red;
+}
+
+/* Blogs page Routs */
+.BlogPage--Container {
+  max-width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  /* This is from stripe */
+  .BlogPage--Container {
+    grid-template-columns: 1fr;
+  }
 }

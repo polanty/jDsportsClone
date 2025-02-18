@@ -7,7 +7,6 @@ import "./stripe.styles.css";
 // Inline styling for stripe payment
 const getCardElementOptions = () => {
   if (window.matchMedia("(max-width: 768px)").matches) {
-    // Mobile styles
     return {
       style: {
         base: {

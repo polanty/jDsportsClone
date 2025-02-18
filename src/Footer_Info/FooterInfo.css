@@ -47,6 +47,12 @@
   }
 }
 
+@media screen and (max-width: 900px) {
+  .footer-link__header {
+    font-size: 0.8rem;
+  }
+}
+
 .footer-link__links {
   display: block;
   font-size: 1.1rem;

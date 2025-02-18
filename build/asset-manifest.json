@@ -1,14 +1,38 @@
 {
   "files": {
-    "main.css": "/static/css/main.58fa8d44.css",
-    "main.js": "/static/js/main.f72807a5.js",
+    "main.css": "/static/css/main.643b7946.css",
+    "main.js": "/static/js/main.7f002448.js",
+    "static/media/desktop-top-banner-1920x840-2024-01-19t170122107-webp": "/static/media/desktop-top-banner-1920x840-2024-01-19t170122107-b255bcc0182e4ac4be0aab65b302035f.12879305f1da8548c74f.webp",
+    "static/media/desktop-top-banner-1920x840-home-4-webp": "/static/media/desktop-top-banner-1920x840-home-4-21d158f753462e1a9e9bea364333d7dd.00834f5e7e5ec137163e.webp",
+    "static/media/desktop-top-banner-1920x840-2025-01-02t094229128-webp": "/static/media/desktop-top-banner-1920x840-2025-01-02t094229128-a9232e1133289c7d7d06a406c5925c82.f4f370f5eff05e58cd67.webp",
+    "static/media/image3.png": "/static/media/image3.d2963418b843231557fb.png",
+    "static/media/TopBanner.gif": "/static/media/TopBanner.dbba789f188d2b5bba5c.gif",
+    "static/media/desktop-top-banner-1920x840-womens-37-webp": "/static/media/desktop-top-banner-1920x840-womens-37-bf30944a1b6a96df2cd10891aa9e08a0.9a4438dd12d987363d88.webp",
     "static/media/jd_549278_al.png": "/static/media/jd_549278_al.97f4dfb78c13eee4be47.png",
+    "static/media/desktop-top-banner-1920x840-kids-23-min-webp": "/static/media/desktop-top-banner-1920x840-kids-23-min-99b9b9abf72612fcbd58640eb1945fcc.a1d065cdf5e9e8b0c9d5.webp",
+    "static/media/desktop-top-banner-1920x840-2025-01-14t155453602-webp": "/static/media/desktop-top-banner-1920x840-2025-01-14t155453602-c0b5deca370f568f46aee2234f7abe8b.3927e5eace63e3c52060.webp",
+    "static/media/desktop-top-banner-1920x840-mens-36-min-webp": "/static/media/desktop-top-banner-1920x840-mens-36-min-96d30052bf44786780c47927358d8ca2.0c03c56db080c2142e1e.webp",
+    "static/media/desktop-top-banner-1920x840-69-1-webp": "/static/media/desktop-top-banner-1920x840-69-1-7cba4175b66d1287fec78c77a34d813a.eb137fedce1385e09229.webp",
+    "static/media/HomePage_advert.webp": "/static/media/HomePage_advert.1dbbdd95180c2858647c.webp",
+    "static/media/desktop-top-banner-1920x840-2025-01-28t093022246-min-webp": "/static/media/desktop-top-banner-1920x840-2025-01-28t093022246-min-23b666cd86d6a432a7ed8b8d2933b518.8b8080e3fbc2fd91c032.webp",
+    "static/media/desktop-top-banner-1920x840-2025-01-17t164045102-webp": "/static/media/desktop-top-banner-1920x840-2025-01-17t164045102-09f11f81287e3bc439ef22d41bc26ef6.42434d9bcbe1b0d916c9.webp",
+    "static/media/midspots-552x552-mens-clothing-30-webp": "/static/media/midspots-552x552-mens-clothing-30-b275e914abbcfdf7d17218537ff71b9e.287f2e55b284072772fb.webp",
+    "static/media/midspots-552x552-kids-clothing-24-webp": "/static/media/midspots-552x552-kids-clothing-24-03cf3e085d532b1d9786f032dd393df2.63206e06bced9b808c8f.webp",
+    "static/media/dropdown-552x552-14-jpg": "/static/media/dropdown-552x552-14-d2e363fa0eb06fa4365fcb842edffc7b.a13343b280c1a9840929.jpg",
+    "static/media/midspots-552x552-mens-accessories-43-webp": "/static/media/midspots-552x552-mens-accessories-43-5079301427bfe0f29aa08073a9f30af1.b85e237a2fb93f31c19f.webp",
+    "static/media/midspots-552x552-mens-footwear-29-webp": "/static/media/midspots-552x552-mens-footwear-29-298b6899dce767cd4cc7cdb22b2ba374.b68983beb89920f03810.webp",
+    "static/media/midspots-552x552-kids-footwear-24-webp": "/static/media/midspots-552x552-kids-footwear-24-73b398f0e24b6f67d731a9f796d22dca.319abe86d309fc98daa6.webp",
+    "static/media/midspots-552x552-womens-footwear-34-webp": "/static/media/midspots-552x552-womens-footwear-34-62717692ffca0bdb36f4b8b16f717da9.0924d0c690c7187e2c2b.webp",
+    "static/media/midspots-552x552-womens-clothing-33-webp": "/static/media/midspots-552x552-womens-clothing-33-e7e9529e9d6e3d9d97e779d190f811a3.4878ef11f341b6df093b.webp",
+    "static/media/jd_720631_bl.webp": "/static/media/jd_720631_bl.6beb77511aaf6089d2d5.webp",
+    "static/media/midspots-552x552-womens-accessories-37-webp": "/static/media/midspots-552x552-womens-accessories-37-cb1a64173a2bd1ffc25d3c6554be7176.9be98ae083a2ba61d6a3.webp",
+    "static/media/cart.png": "/static/media/cart.38a9a647e074e2314104.png",
     "index.html": "/index.html",
-    "main.58fa8d44.css.map": "/static/css/main.58fa8d44.css.map",
-    "main.f72807a5.js.map": "/static/js/main.f72807a5.js.map"
+    "main.643b7946.css.map": "/static/css/main.643b7946.css.map",
+    "main.7f002448.js.map": "/static/js/main.7f002448.js.map"
   },
   "entrypoints": [
-    "static/css/main.58fa8d44.css",
-    "static/js/main.f72807a5.js"
+    "static/css/main.643b7946.css",
+    "static/js/main.7f002448.js"
   ]
 }
