@@ -48,7 +48,7 @@ const StripeForm = () => {
 
   const [isProcessingPayment, setIsProcessingPayment] = useState(false);
 
-  const amount = totalPrice * 100;
+  const amount = Math.round(totalPrice * 100);
 
   //  credit card payment details
   const handlePaymentSubmit = async (e) => {
@@ -72,6 +72,9 @@ const StripeForm = () => {
 
     let paymentIntentData;
 
+    // "/.netlify/functions/create-payment-intent",
+    // "/api/stripe.js"
+
     try {
       const response = await fetch(
         "/.netlify/functions/create-payment-intent",
@@ -90,6 +93,8 @@ const StripeForm = () => {
 
       const data = await response.json();
 
+      console.log(data);
+
       paymentIntentData = data;
     } catch (error) {
       console.error("Error creating payment intent:", error.message);
@@ -99,6 +104,8 @@ const StripeForm = () => {
     const {
       paymentIntent: { client_secret },
     } = paymentIntentData;
+
+    console.log(paymentIntentData);
 
     const paymentResult = await stripe.confirmCardPayment(client_secret, {
       payment_method: {

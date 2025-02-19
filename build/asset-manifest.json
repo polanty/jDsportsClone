@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.643b7946.css",
-    "main.js": "/static/js/main.7f002448.js",
+    "main.css": "/static/css/main.c26e28a4.css",
+    "main.js": "/static/js/main.4ebbc3ff.js",
     "static/media/desktop-top-banner-1920x840-2024-01-19t170122107-webp": "/static/media/desktop-top-banner-1920x840-2024-01-19t170122107-b255bcc0182e4ac4be0aab65b302035f.12879305f1da8548c74f.webp",
     "static/media/desktop-top-banner-1920x840-home-4-webp": "/static/media/desktop-top-banner-1920x840-home-4-21d158f753462e1a9e9bea364333d7dd.00834f5e7e5ec137163e.webp",
     "static/media/desktop-top-banner-1920x840-2025-01-02t094229128-webp": "/static/media/desktop-top-banner-1920x840-2025-01-02t094229128-a9232e1133289c7d7d06a406c5925c82.f4f370f5eff05e58cd67.webp",
@@ -28,11 +28,11 @@
     "static/media/midspots-552x552-womens-accessories-37-webp": "/static/media/midspots-552x552-womens-accessories-37-cb1a64173a2bd1ffc25d3c6554be7176.9be98ae083a2ba61d6a3.webp",
     "static/media/cart.png": "/static/media/cart.38a9a647e074e2314104.png",
     "index.html": "/index.html",
-    "main.643b7946.css.map": "/static/css/main.643b7946.css.map",
-    "main.7f002448.js.map": "/static/js/main.7f002448.js.map"
+    "main.c26e28a4.css.map": "/static/css/main.c26e28a4.css.map",
+    "main.4ebbc3ff.js.map": "/static/js/main.4ebbc3ff.js.map"
   },
   "entrypoints": [
-    "static/css/main.643b7946.css",
-    "static/js/main.7f002448.js"
+    "static/css/main.c26e28a4.css",
+    "static/js/main.4ebbc3ff.js"
   ]
 }

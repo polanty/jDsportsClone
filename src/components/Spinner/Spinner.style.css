@@ -25,6 +25,11 @@
     height: 70px;
     border: 2px solid rgba(195, 195, 195, 0.6);
   }
+
+  .SpinnerContainer__small {
+    width: 35px;
+    height: 35px;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -34,6 +39,11 @@
     height: 50px;
     border: 2px solid rgba(195, 195, 195, 0.6);
   }
+
+  .SpinnerContainer__small {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -42,6 +52,11 @@
     width: 30px;
     height: 30px;
     border: 1px solid rgba(195, 195, 195, 0.6);
+  }
+
+  .SpinnerContainer__small {
+    width: 15px;
+    height: 15px;
   }
 }
 
