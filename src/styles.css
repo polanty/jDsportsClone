@@ -32,13 +32,14 @@ html {
 @media screen and (max-width: 900px) {
   html {
     font-size: 55.5%;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 }
 
 @media screen and (max-width: 600px) {
   html {
     font-size: 45.5%;
-    overflow-y: scroll;
   }
 }
 
