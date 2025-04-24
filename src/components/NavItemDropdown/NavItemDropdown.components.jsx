@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { UserContext } from "../../Contexts/Cart.context";
 import { AllProductImages } from "../../assets/AllImages/AllImagesObject/AllImagesObject";
@@ -118,9 +118,9 @@ export const NavItemDropdown = ({
                 <div className="dropdownTextHeader">
                   <h2>Brands</h2>
                 </div>
-                {uniqueBrands.map((brand) => (
+                {uniqueBrands.map((brand, i) => (
                   <>
-                    <div>
+                    <div key={i}>
                       {" "}
                       <p
                         onClick={() => filterbasedOnLinkClicked(brand)}
@@ -136,9 +136,9 @@ export const NavItemDropdown = ({
                 <div className="dropdownTextHeader">
                   <h2>Products</h2>
                 </div>
-                {uniqueTypes.map((types) => (
+                {uniqueTypes.map((types, i) => (
                   <>
-                    <div>
+                    <div key={i}>
                       {" "}
                       <Link
                         to={`${text}/${types}`}
@@ -171,10 +171,11 @@ export const NavItemDropdown = ({
               <h2>Shop by Brand</h2>
             </div>
             <div className="brandLettersContainer">
-              {brandAlpha.map((current) => (
+              {brandAlpha.map((current, i) => (
                 <p
                   onClick={onclickBrandPagefilter}
                   className="dropdownBrandText"
+                  key={i}
                 >
                   {current}
                 </p>
@@ -182,8 +183,12 @@ export const NavItemDropdown = ({
             </div>
             <div>
               {brandsIncuded.length > 0 &&
-                brandsIncuded.map((current) => (
-                  <p onClick={onsubmitSearchhandler} className="dropdownText">
+                brandsIncuded.map((current, i) => (
+                  <p
+                    onClick={onsubmitSearchhandler}
+                    className="dropdownText"
+                    key={i}
+                  >
                     {current}
                   </p>
                 ))}

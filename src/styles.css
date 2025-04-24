@@ -15,12 +15,21 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  /* box-sizing: inherit; */
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 html {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   font-size: 62.5%; /*converting 10px to 1 rem instead of 16px from all browser default */
+  max-width: 100%;
 }
 
 @media screen and (max-width: 1200px) {
@@ -40,11 +49,20 @@ html {
 @media screen and (max-width: 600px) {
   html {
     font-size: 45.5%;
+    overflow-x: hidden;
   }
 }
 
 #root {
   position: relative;
+  overflow-x: hidden;
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto; /* To maintain aspect ratio */
 }
 
 /* trial for fonts */
@@ -76,6 +94,9 @@ html {
 body {
   font-family: Gotham SSm A, Gotham SSm B, Arial, sans-serif;
   position: relative;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  width: 100%;
+  height: 100%;
 }
 
 @media only screen and (max-width: 400px) {
