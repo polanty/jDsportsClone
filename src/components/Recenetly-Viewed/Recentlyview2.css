@@ -1,0 +1,79 @@
+.ProductView__recentlyViewed {
+  width: 100%;
+  min-height: 30vh;
+  height: 50vh;
+  border-top: 1px solid #ccc;
+  padding: 1.5rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1200px) {
+  .ProductView__recentlyViewed {
+    min-height: 25vh;
+    padding: 1.2rem 4rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .ProductView__recentlyViewed {
+    min-height: 20vh;
+    padding: 1rem 3rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ProductView__recentlyViewed {
+    min-height: 10vh;
+    padding: 1rem 2rem;
+  }
+}
+
+.ProductView__recentlyViewed-innerContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.footer-link__header {
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.recently__viewed-item-container {
+  display: flex;
+  gap: 1rem;
+  height: 80%; /* ← This handles your 80% height request */
+  width: 100%;
+  align-items: center;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .recently__viewed-item-container {
+    height: 70%; /* ← This handles your 80% height request */
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .recently__viewed-item-container {
+    height: 60%; /* ← This handles your 80% height request */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .recently__viewed-item-container {
+    height: 50%; /* ← This handles your 80% height request */
+  }
+}
+
+.recentlyViewed__product {
+  flex-shrink: 0;
+  height: 100%;
+  max-width: max-content;
+}
