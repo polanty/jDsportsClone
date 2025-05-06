@@ -1,34 +1,14 @@
+.ProductView__noProducts {
+  min-height: 25rem;
+}
 .ProductView__recentlyViewed {
-  width: 100%;
-  min-height: 30vh;
-  height: 50vh;
-  border-top: 1px solid #ccc;
-  padding: 1.5rem 5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
-  box-sizing: border-box;
 }
 
-@media screen and (max-width: 1200px) {
-  .ProductView__recentlyViewed {
-    min-height: 25vh;
-    padding: 1.2rem 4rem;
-  }
-}
-
-@media screen and (max-width: 900px) {
-  .ProductView__recentlyViewed {
-    min-height: 20vh;
-    padding: 1rem 3rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .ProductView__recentlyViewed {
-    min-height: 10vh;
-    padding: 1rem 2rem;
-  }
+.RecentlyViewed-Products_container {
+  width: 22%;
+  margin-right: 2rem;
 }
 
 .ProductView__recentlyViewed-innerContainer {

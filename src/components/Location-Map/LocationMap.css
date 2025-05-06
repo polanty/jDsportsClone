@@ -16,11 +16,20 @@
 }
 
 .AllProduct__location-innerLink {
+  display: flex;
+  align-items: center;
   margin-left: 1.2rem;
   color: black;
   font-size: 1.2rem;
   text-decoration: none;
   text-transform: capitalize;
+}
+
+.AllProduct__location-pointer {
+  display: inline-block;
+  align-self: flex-end;
+  margin-right: 0.8rem;
+  margin-top: 0.3rem;
 }
 @media screen and (max-width: 900px) {
   .AllProduct__location-details {

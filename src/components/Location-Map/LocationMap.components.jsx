@@ -12,7 +12,19 @@ const LocationMap = ({ locationPath }) => {
           (link, ind) =>
             link.length > 0 && (
               <p key={ind} className="AllProduct__location-innerLink">
-                &#11166; {link}
+                <span className="AllProduct__location-pointer">
+                  <svg
+                    width="7"
+                    height="7"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polygon points="8,5 19,12 8,19" />
+                  </svg>
+                </span>
+
+                {link}
               </p>
             )
         )}
@@ -21,4 +33,5 @@ const LocationMap = ({ locationPath }) => {
   );
 };
 
+// &#11166; ;
 export default LocationMap;
