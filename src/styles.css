@@ -647,6 +647,16 @@ body {
   position: relative;
 }
 
+.SignUp-input,
+.SignUp-input--search {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
 .SignUp-input {
   padding: 1.8rem 1rem;
 }
@@ -659,6 +669,18 @@ body {
 }
 
 .SignUp-input::placeholder {
+  font-family: Gotham SSm A, Gotham SSm B, Arial, sans-serif;
+}
+
+.SignUp-input::-webkit-input-placeholder {
+  font-family: Gotham SSm A, Gotham SSm B, Arial, sans-serif;
+}
+
+.SignUp-input:-ms-input-placeholder {
+  font-family: Gotham SSm A, Gotham SSm B, Arial, sans-serif;
+}
+
+.SignUp-input::-ms-input-placeholder {
   font-family: Gotham SSm A, Gotham SSm B, Arial, sans-serif;
 }
 
@@ -709,6 +731,9 @@ body {
   color: #1a1a1a;
 
   position: relative;
+
+  z-index: 2;
+  -webkit-transform: translateZ(0);
 }
 
 @media screen and (max-width: 900px) {
@@ -1376,9 +1401,9 @@ body {
     font-size: 0.8rem;
   }
 
-  .total--price__container {
+  /* .total--price__container {
     font-size: 1rem;
-  }
+  } */
 
   .btn-checkout {
     margin: 0.8rem 0;

@@ -8,7 +8,7 @@
   padding: 1rem;
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-  box-shadow: 2px 2px 2px 2px #ccc;
+  box-shadow: 2px 2px 2px 1px #ccc;
 }
 
 /* .Basket__Container:hover {
@@ -72,6 +72,7 @@
   }
 
   .Basket__Container {
+    width: 40rem;
     transform: translateX(-92.5%);
   }
 }
@@ -84,6 +85,7 @@
   }
 
   .Basket__Container {
+    width: 35rem;
     transform: translateX(-94%);
   }
 }
