@@ -62,25 +62,45 @@ const OverLay = () => {
         </div>
         <div className="recently__viewed">
           <h3 className="Overlay__header">Recently Viewed</h3>
-          <div className="recently__viewed-item-container">
+          <div className="recently__viewed-items-container">
             {recentlViewedContainer
               .filter((_, ind) => ind < 4)
               .map((product, ind) => (
-                <Product
-                  product={product}
-                  key={ind}
-                  classNAME={`product-view__recentlyViewed`}
-                  classNAME2="recentlViewedContainer-product-view"
-                />
+                <div className="RecentlyViewed-Products_container">
+                  <Product
+                    product={product}
+                    key={ind}
+                    classNAME="recentlViewedContainer-product-view"
+                  />
+                </div>
               ))}
           </div>
         </div>
         <div className={`nav__inner-link-pointer`}></div>
       </div>
 
-      {/* ${
+      {/*   */}
+
+      {
+        /* ${
           isHovered ? "nav__link-pointer-active" : ""
-        } */}
+        } */
+        //   <div className="recently__viewed">
+        //   <h3 className="Overlay__header">Recently Viewed</h3>
+        //   <div className="recently__viewed-item-container">
+        //     {recentlViewedContainer
+        //       .filter((_, ind) => ind < 4)
+        //       .map((product, ind) => (
+        //         <Product
+        //           product={product}
+        //           key={ind}
+        //           classNAME={`product-view__recentlyViewed`}
+        //           classNAME2="recentlViewedContainer-product-view"
+        //         />
+        //       ))}
+        //   </div>
+        // </div>
+      }
     </>
   );
 };

@@ -93,7 +93,7 @@
 @media screen and (max-width: 900px) {
   .Product-Div-name,
   .Product-Div-price {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -105,7 +105,7 @@
 
   .Product-Div-name,
   .Product-Div-price {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -116,7 +116,7 @@
 
   .Product-Div-name,
   .Product-Div-price {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 
   /* .Product-Div {
