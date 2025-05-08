@@ -157,8 +157,14 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 900px) {
   .footer__payment-logo {
     height: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer__payment-logo {
+    height: 7px;
   }
 }

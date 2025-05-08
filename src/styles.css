@@ -657,6 +657,14 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+input,
+textarea,
+select {
+  border-radius: 0 !important; /* Force no rounding */
+  -webkit-appearance: none; /* Remove Safari styles */
+  appearance: none;
+}
+
 .SignUp-input {
   padding: 1.8rem 1rem;
 }
@@ -1302,7 +1310,7 @@ body {
   }
 
   .standard_delivery--details p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .total--price__container {
@@ -1349,14 +1357,10 @@ body {
   }
 
   .standard_delivery--details p {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .total--price__container {
-    font-size: 1rem;
-  }
-
-  .standard_delivery h1 {
     font-size: 1rem;
   }
 
@@ -1374,6 +1378,7 @@ body {
 
   .btn-checkout {
     margin: 1rem 0;
+    height: 3rem;
   }
 }
 
@@ -1390,14 +1395,10 @@ body {
   }
 
   .standard_delivery--details p {
-    font-size: 0.8rem;
+    font-size: 0.65rem;
   }
 
   .total--price__container {
-    font-size: 0.8rem;
-  }
-
-  .standard_delivery h1 {
     font-size: 0.8rem;
   }
 
@@ -1406,6 +1407,7 @@ body {
   } */
 
   .btn-checkout {
+    height: 2.5rem;
     margin: 0.8rem 0;
   }
 }
