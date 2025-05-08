@@ -66,7 +66,7 @@ const OverLay = () => {
             {recentlViewedContainer
               .filter((_, ind) => ind < 4)
               .map((product, ind) => (
-                <div className="RecentlyViewed-Products_container">
+                <div key={ind} className="RecentlyViewed-Products_container">
                   <Product
                     product={product}
                     key={ind}
