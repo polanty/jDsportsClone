@@ -1,14 +1,37 @@
 .ProductView__noProducts {
   min-height: 25rem;
 }
+
 .ProductView__recentlyViewed {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.ProductView__recentlyViewed::-webkit-scrollbar {
+  height: 8px;
+}
+
+.ProductView__recentlyViewed::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.ProductView__recentlyViewed::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.ProductView__recentlyViewed::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .RecentlyViewed-Products_container {
-  width: 22%;
-  margin-right: 2rem;
+  flex-shrink: 0;
+  width: 280px;
+  min-height: 350px;
 }
 
 .ProductView__recentlyViewed-innerContainer {
@@ -20,14 +43,15 @@
 }
 
 .footer-link__header {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
   font-size: 1.4rem;
+  font-weight: 600;
 }
 
 .recently__viewed-item-container {
   display: flex;
   gap: 1rem;
-  height: 80%; /* ← This handles your 80% height request */
+  height: 80%;
   width: 100%;
   align-items: center;
   overflow-x: auto;
@@ -35,20 +59,35 @@
 }
 
 @media screen and (max-width: 1200px) {
+  .RecentlyViewed-Products_container {
+    width: 240px;
+    min-height: 300px;
+  }
+
   .recently__viewed-item-container {
-    height: 70%; /* ← This handles your 80% height request */
+    height: 70%;
   }
 }
 
 @media screen and (max-width: 900px) {
+  .RecentlyViewed-Products_container {
+    width: 200px;
+    min-height: 250px;
+  }
+
   .recently__viewed-item-container {
-    height: 60%; /* ← This handles your 80% height request */
+    height: 60%;
   }
 }
 
 @media screen and (max-width: 600px) {
+  .RecentlyViewed-Products_container {
+    width: 180px;
+    min-height: 220px;
+  }
+
   .recently__viewed-item-container {
-    height: 50%; /* ← This handles your 80% height request */
+    height: 50%;
   }
 }
 
